@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <ImageView
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:background="@drawable/bg_botao"
+        android:contentDescription="Sair"
+        android:padding="16dp"
+        android:src="@drawable/ic_logout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Tem certeza que quer sair ?"
+        android:textColor="@color/branco" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSim"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_botao"
+        android:text="Sim"
+        android:textAllCaps="false"
+        android:textColor="@color/preto" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNao"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_botao"
+        android:text="Não"
+        android:textAllCaps="false"
+        android:textColor="@color/preto" />
+</LinearLayout>
