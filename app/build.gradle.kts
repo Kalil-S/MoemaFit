@@ -44,5 +44,6 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
+    implementation(libs.androidx.cardview)
     androidTestImplementation(libs.androidx.espresso.core)
 }

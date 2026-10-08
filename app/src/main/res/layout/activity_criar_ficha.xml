@@ -1,128 +1,376 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#142193">
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Criar ficha"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <!-- TOOLBAR FIXA NO TOPO -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.056" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Nome da ficha"
-        android:inputType="text"
-        android:textColor="#FBFBFB"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.39"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.216" />
+        <ImageButton
+            android:id="@+id/button2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerInside"
+            android:src="@drawable/seta_voltar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#000000" />
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nome da ficha"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.218"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.174" />
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Criar ficha"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <EditText
-        android:id="@+id/editTextTextEmailAddress3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress"
+    <!-- ÁREA DE SCROLL -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.39"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.388" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbarLayout">
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="E-mail do Aluno"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.223"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.339" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-    <EditText
-        android:id="@+id/editTextText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.39"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.557" />
+            <!-- DADOS DO ALUNO -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome da ficha"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="8dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#3949AB"
+                android:hint="Ex: Treino de Costas"
+                android:inputType="text"
+                android:paddingHorizontal="8dp"
+                android:textColor="#FBFBFB"
+                android:textColorHint="#88FFFFFF" />
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Objetivo"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.19"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-mail do Aluno"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="12dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#3949AB"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="8dp"
+                android:textColor="#FFFFFF"/>
 
-    <EditText
-        android:id="@+id/editTextText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.39"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.704" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Objetivo"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="12dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#3949AB"
+                android:inputType="text"
+                android:paddingHorizontal="8dp"
+                android:textColor="#FFFFFF"/>
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" Peso do aluno (Kg)"
-        android:textColor="#FAF4F4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.246"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.642" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Peso do aluno (Kg)"
+                android:textColor="#FAF4F4"
+                android:layout_marginTop="12dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#3949AB"
+                android:inputType="numberDecimal"
+                android:paddingHorizontal="8dp"
+                android:textColor="#FFFFFF"/>
+
+            <!-- ============================== -->
+            <!-- TREINO A                       -->
+            <!-- ============================== -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="#8E9399"
+                android:padding="8dp"
+                android:text="Treino A"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.5" android:text="Exercícios" android:textColor="#FFFFFF" android:textAlignment="center"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Série" android:textColor="#FFFFFF" android:textAlignment="center"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Rep" android:textColor="#FFFFFF" android:textAlignment="center"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Carg" android:textColor="#FFFFFF" android:textAlignment="center"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:text="Desc" android:textColor="#FFFFFF" android:textAlignment="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/container_exercicios_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp">
+                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.5" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:paddingHorizontal="4dp" android:textColor="#000000" android:inputType="text" />
+                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:textAlignment="center" android:textColor="#000000" android:inputType="number" />
+                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:textAlignment="center" android:textColor="#000000" android:inputType="number" />
+                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:textAlignment="center" android:textColor="#000000" android:inputType="numberDecimal" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:background="#E3F2FD" android:minHeight="48dp" android:orientation="horizontal" android:gravity="center_vertical">
+                        <EditText android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@null" android:gravity="center" android:hint="00" android:textColor="#000000" android:inputType="number" />
+                        <Spinner android:layout_width="wrap_content" android:layout_height="match_parent" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Botão pequeno de adicionar [+] -->
+            <ImageButton
+                android:id="@+id/btn_add_exercicio_a"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/circulo_fundo_cinza"
+                android:src="@android:drawable/ic_input_add"
+                app:tint="#000000"
+                android:scaleType="centerInside"/>
+
+            <!-- ============================== -->
+            <!-- TREINO B                       -->
+            <!-- ============================== -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="#8E9399"
+                android:padding="8dp"
+                android:text="Treino B"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.5" android:text="Exercícios" android:textColor="#FFFFFF" android:textAlignment="center"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Série" android:textColor="#FFFFFF" android:textAlignment="center"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Rep" android:textColor="#FFFFFF" android:textAlignment="center"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Carg" android:textColor="#FFFFFF" android:textAlignment="center"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:text="Desc" android:textColor="#FFFFFF" android:textAlignment="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/container_exercicios_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp">
+                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.5" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:paddingHorizontal="4dp" android:textColor="#000000" android:inputType="text" />
+                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:textAlignment="center" android:textColor="#000000" android:inputType="number" />
+                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:textAlignment="center" android:textColor="#000000" android:inputType="number" />
+                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:textAlignment="center" android:textColor="#000000" android:inputType="numberDecimal" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:background="#E3F2FD" android:minHeight="48dp" android:orientation="horizontal" android:gravity="center_vertical">
+                        <EditText android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@null" android:gravity="center" android:hint="00" android:textColor="#000000" android:inputType="number" />
+                        <Spinner android:layout_width="wrap_content" android:layout_height="match_parent" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_add_exercicio_b"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/circulo_fundo_cinza"
+                android:src="@android:drawable/ic_input_add"
+                android:scaleType="centerInside"
+                app:tint="#000000" />
+
+            <!-- ============================== -->
+            <!-- TREINO C                       -->
+            <!-- ============================== -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="#8E9399"
+                android:padding="8dp"
+                android:text="Treino C"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.5" android:text="Exercícios" android:textColor="#FFFFFF" android:textAlignment="center"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Série" android:textColor="#FFFFFF" android:textAlignment="center"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Rep" android:textColor="#FFFFFF" android:textAlignment="center"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Carg" android:textColor="#FFFFFF" android:textAlignment="center"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:text="Desc" android:textColor="#FFFFFF" android:textAlignment="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/container_exercicios_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp">
+                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.5" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:paddingHorizontal="4dp" android:textColor="#000000" android:inputType="text" />
+                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:textAlignment="center" android:textColor="#000000" android:inputType="number" />
+                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:textAlignment="center" android:textColor="#000000" android:inputType="number" />
+                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:textAlignment="center" android:textColor="#000000" android:inputType="numberDecimal" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:background="#E3F2FD" android:minHeight="48dp" android:orientation="horizontal" android:gravity="center_vertical">
+                        <EditText android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@null" android:gravity="center" android:hint="00" android:textColor="#000000" android:inputType="number" />
+                        <Spinner android:layout_width="wrap_content" android:layout_height="match_parent" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_add_exercicio_c"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/circulo_fundo_cinza"
+                android:src="@android:drawable/ic_input_add"
+                app:tint="#000000"
+                android:scaleType="centerInside"/>
+
+            <!-- ============================== -->
+            <!-- OBSERVAÇÕES E VALIDADE         -->
+            <!-- ============================== -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Observações"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="24dp"/>
+
+            <EditText
+                android:id="@+id/edit_observacoes"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#3949AB"
+                android:gravity="top|start"
+                android:inputType="textMultiLine"
+                android:padding="8dp"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Validade da ficha"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="16dp"/>
+
+            <!-- focusable="false" impede que o teclado abra. O clique deve ser capturado no Kotlin/Java -->
+            <EditText
+                android:id="@+id/edit_validade"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#3949AB"
+                android:focusable="false"
+                android:clickable="true"
+                android:hint="DD/MM/AAAA"
+                android:paddingHorizontal="8dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#88FFFFFF"
+                android:layout_marginTop="8dp"/>
+
+            <!-- ============================== -->
+            <!-- BOTÕES CANCELAR E ENVIAR       -->
+            <!-- ============================== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp">
+
+                <Button
+                    android:id="@+id/btn_enviar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:text="Enviar"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/btn_cancelar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:text="Cancelar"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
