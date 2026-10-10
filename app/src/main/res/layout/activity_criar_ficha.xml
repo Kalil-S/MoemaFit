@@ -7,12 +7,13 @@
     android:layout_height="match_parent"
     android:background="#142193">
 
-    <!-- TOOLBAR FIXA NO TOPO -->
+    <!-- TOOLBAR FIXA NO TOPO (Agora com elevação/sombra) -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/toolbarLayout"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="#FFFFFF"
+        android:elevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -28,7 +29,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:tint="#000000" />
+            app:tint="#142193" /> <!-- Cor da seta atualizada para o azul do tema -->
 
         <TextView
             android:id="@+id/textView9"
@@ -36,7 +37,7 @@
             android:layout_height="wrap_content"
             android:text="Criar ficha"
             android:textAlignment="center"
-            android:textColor="#000000"
+            android:textColor="#142193"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -50,6 +51,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:fillViewport="true"
+        android:clipToPadding="false"
+        android:paddingBottom="24dp"
+        android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarLayout">
 
@@ -59,285 +63,433 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- DADOS DO ALUNO -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nome da ficha"
-                android:textColor="#FFFFFF"
-                android:layout_marginTop="8dp"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="#3949AB"
-                android:hint="Ex: Treino de Costas"
-                android:inputType="text"
-                android:paddingHorizontal="8dp"
-                android:textColor="#FBFBFB"
-                android:textColorHint="#88FFFFFF" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="E-mail do Aluno"
-                android:textColor="#FFFFFF"
-                android:layout_marginTop="12dp"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="#3949AB"
-                android:inputType="textEmailAddress"
-                android:paddingHorizontal="8dp"
-                android:textColor="#FFFFFF"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Objetivo"
-                android:textColor="#FFFFFF"
-                android:layout_marginTop="12dp"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="#3949AB"
-                android:inputType="text"
-                android:paddingHorizontal="8dp"
-                android:textColor="#FFFFFF"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Peso do aluno (Kg)"
-                android:textColor="#FAF4F4"
-                android:layout_marginTop="12dp"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="#3949AB"
-                android:inputType="numberDecimal"
-                android:paddingHorizontal="8dp"
-                android:textColor="#FFFFFF"/>
-
             <!-- ============================== -->
-            <!-- TREINO A                       -->
+            <!-- CARD 1: DADOS DO ALUNO         -->
             <!-- ============================== -->
-            <TextView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:background="#8E9399"
-                android:padding="8dp"
-                android:text="Treino A"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.5" android:text="Exercícios" android:textColor="#FFFFFF" android:textAlignment="center"/>
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Série" android:textColor="#FFFFFF" android:textAlignment="center"/>
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Rep" android:textColor="#FFFFFF" android:textAlignment="center"/>
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Carg" android:textColor="#FFFFFF" android:textAlignment="center"/>
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:text="Desc" android:textColor="#FFFFFF" android:textAlignment="center"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/container_exercicios_a"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeWidth="0dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="4dp">
-                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.5" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:paddingHorizontal="4dp" android:textColor="#000000" android:inputType="text" />
-                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:textAlignment="center" android:textColor="#000000" android:inputType="number" />
-                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:textAlignment="center" android:textColor="#000000" android:inputType="number" />
-                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:textAlignment="center" android:textColor="#000000" android:inputType="numberDecimal" />
-                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:background="#E3F2FD" android:minHeight="48dp" android:orientation="horizontal" android:gravity="center_vertical">
-                        <EditText android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@null" android:gravity="center" android:hint="00" android:textColor="#000000" android:inputType="number" />
-                        <Spinner android:layout_width="wrap_content" android:layout_height="match_parent" />
-                    </LinearLayout>
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dados do Aluno"
+                        android:textColor="#142193"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        app:boxStrokeColor="#142193"
+                        app:hintTextColor="#142193">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Nome da ficha (Ex: Ficha Gabriel)"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        app:boxStrokeColor="#142193"
+                        app:hintTextColor="#142193">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="E-mail do Aluno"
+                            android:inputType="textEmailAddress" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        app:boxStrokeColor="#142193"
+                        app:hintTextColor="#142193">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Objetivo"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxStrokeColor="#142193"
+                        app:hintTextColor="#142193">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Peso do aluno (Kg)"
+                            android:inputType="numberDecimal" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
                 </LinearLayout>
-            </LinearLayout>
-
-            <!-- Botão pequeno de adicionar [+] -->
-            <ImageButton
-                android:id="@+id/btn_add_exercicio_a"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/circulo_fundo_cinza"
-                android:src="@android:drawable/ic_input_add"
-                app:tint="#000000"
-                android:scaleType="centerInside"/>
+            </com.google.android.material.card.MaterialCardView>
 
             <!-- ============================== -->
-            <!-- TREINO B                       -->
+            <!-- CARD 2: TREINO A               -->
             <!-- ============================== -->
-            <TextView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:background="#8E9399"
-                android:padding="8dp"
-                android:text="Treino B"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.5" android:text="Exercícios" android:textColor="#FFFFFF" android:textAlignment="center"/>
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Série" android:textColor="#FFFFFF" android:textAlignment="center"/>
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Rep" android:textColor="#FFFFFF" android:textAlignment="center"/>
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Carg" android:textColor="#FFFFFF" android:textAlignment="center"/>
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:text="Desc" android:textColor="#FFFFFF" android:textAlignment="center"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/container_exercicios_b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeWidth="0dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="4dp">
-                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.5" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:paddingHorizontal="4dp" android:textColor="#000000" android:inputType="text" />
-                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:textAlignment="center" android:textColor="#000000" android:inputType="number" />
-                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:textAlignment="center" android:textColor="#000000" android:inputType="number" />
-                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:textAlignment="center" android:textColor="#000000" android:inputType="numberDecimal" />
-                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:background="#E3F2FD" android:minHeight="48dp" android:orientation="horizontal" android:gravity="center_vertical">
-                        <EditText android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@null" android:gravity="center" android:hint="00" android:textColor="#000000" android:inputType="number" />
-                        <Spinner android:layout_width="wrap_content" android:layout_height="match_parent" />
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Treino A"
+                        android:textColor="#142193"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp"/>
+
+                    <!-- Cabeçalho da Tabela -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp"
+                        android:paddingHorizontal="4dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.5" android:text="Exercícios" android:textColor="#888888" android:textSize="12sp" android:textStyle="bold" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Série" android:textColor="#888888" android:textSize="12sp" android:textStyle="bold" android:textAlignment="center"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Rep" android:textColor="#888888" android:textSize="12sp" android:textStyle="bold" android:textAlignment="center"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Carg" android:textColor="#888888" android:textSize="12sp" android:textStyle="bold" android:textAlignment="center"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:text="Desc" android:textColor="#888888" android:textSize="12sp" android:textStyle="bold" android:textAlignment="center"/>
                     </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/container_exercicios_a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Linha de Exercício Estilizada (Fundo cinza claro, bordas arredondadas e divisórias) -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            app:cardBackgroundColor="#F5F7FA"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:paddingVertical="4dp">
+
+                                <EditText android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="2.5" android:background="@null" android:paddingHorizontal="8dp" android:textSize="14sp" android:textColor="#333333" android:inputType="text" android:hint="Nome"/>
+                                <View android:layout_width="1dp" android:layout_height="24dp" android:background="#D0D6E0" />
+                                <EditText android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@null" android:textAlignment="center" android:textSize="14sp" android:textColor="#333333" android:inputType="number" android:hint="0"/>
+                                <View android:layout_width="1dp" android:layout_height="24dp" android:background="#D0D6E0" />
+                                <EditText android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@null" android:textAlignment="center" android:textSize="14sp" android:textColor="#333333" android:inputType="number" android:hint="0"/>
+                                <View android:layout_width="1dp" android:layout_height="24dp" android:background="#D0D6E0" />
+                                <EditText android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@null" android:textAlignment="center" android:textSize="14sp" android:textColor="#333333" android:inputType="numberDecimal" android:hint="0.0"/>
+                                <View android:layout_width="1dp" android:layout_height="24dp" android:background="#D0D6E0" />
+
+                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2" android:orientation="horizontal" android:gravity="center_vertical">
+                                    <EditText android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@null" android:gravity="center" android:hint="00" android:textSize="14sp" android:textColor="#333333" android:inputType="number" />
+                                    <Spinner android:layout_width="wrap_content" android:layout_height="match_parent" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+
+                    <!-- Botão Adicionar Moderno -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_add_exercicio_a"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adicionar Exercício"
+                        android:textColor="#142193"
+                        app:icon="@android:drawable/ic_input_add"
+                        app:iconTint="#142193" />
                 </LinearLayout>
-            </LinearLayout>
-
-            <ImageButton
-                android:id="@+id/btn_add_exercicio_b"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/circulo_fundo_cinza"
-                android:src="@android:drawable/ic_input_add"
-                android:scaleType="centerInside"
-                app:tint="#000000" />
+            </com.google.android.material.card.MaterialCardView>
 
             <!-- ============================== -->
-            <!-- TREINO C                       -->
+            <!-- CARD 3: TREINO B               -->
             <!-- ============================== -->
-            <TextView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:background="#8E9399"
-                android:padding="8dp"
-                android:text="Treino C"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.5" android:text="Exercícios" android:textColor="#FFFFFF" android:textAlignment="center"/>
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Série" android:textColor="#FFFFFF" android:textAlignment="center"/>
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Rep" android:textColor="#FFFFFF" android:textAlignment="center"/>
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Carg" android:textColor="#FFFFFF" android:textAlignment="center"/>
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:text="Desc" android:textColor="#FFFFFF" android:textAlignment="center"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/container_exercicios_c"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeWidth="0dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="4dp">
-                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.5" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:paddingHorizontal="4dp" android:textColor="#000000" android:inputType="text" />
-                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:textAlignment="center" android:textColor="#000000" android:inputType="number" />
-                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:textAlignment="center" android:textColor="#000000" android:inputType="number" />
-                    <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="#E3F2FD" android:minHeight="48dp" android:textAlignment="center" android:textColor="#000000" android:inputType="numberDecimal" />
-                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:background="#E3F2FD" android:minHeight="48dp" android:orientation="horizontal" android:gravity="center_vertical">
-                        <EditText android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@null" android:gravity="center" android:hint="00" android:textColor="#000000" android:inputType="number" />
-                        <Spinner android:layout_width="wrap_content" android:layout_height="match_parent" />
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Treino B"
+                        android:textColor="#142193"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp"
+                        android:paddingHorizontal="4dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.5" android:text="Exercícios" android:textColor="#888888" android:textSize="12sp" android:textStyle="bold" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Série" android:textColor="#888888" android:textSize="12sp" android:textStyle="bold" android:textAlignment="center"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Rep" android:textColor="#888888" android:textSize="12sp" android:textStyle="bold" android:textAlignment="center"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Carg" android:textColor="#888888" android:textSize="12sp" android:textStyle="bold" android:textAlignment="center"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:text="Desc" android:textColor="#888888" android:textSize="12sp" android:textStyle="bold" android:textAlignment="center"/>
                     </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/container_exercicios_b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            app:cardBackgroundColor="#F5F7FA"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:paddingVertical="4dp">
+
+                                <EditText android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="2.5" android:background="@null" android:paddingHorizontal="8dp" android:textSize="14sp" android:textColor="#333333" android:inputType="text" android:hint="Nome"/>
+                                <View android:layout_width="1dp" android:layout_height="24dp" android:background="#D0D6E0" />
+                                <EditText android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@null" android:textAlignment="center" android:textSize="14sp" android:textColor="#333333" android:inputType="number" android:hint="0"/>
+                                <View android:layout_width="1dp" android:layout_height="24dp" android:background="#D0D6E0" />
+                                <EditText android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@null" android:textAlignment="center" android:textSize="14sp" android:textColor="#333333" android:inputType="number" android:hint="0"/>
+                                <View android:layout_width="1dp" android:layout_height="24dp" android:background="#D0D6E0" />
+                                <EditText android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@null" android:textAlignment="center" android:textSize="14sp" android:textColor="#333333" android:inputType="numberDecimal" android:hint="0.0"/>
+                                <View android:layout_width="1dp" android:layout_height="24dp" android:background="#D0D6E0" />
+                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2" android:orientation="horizontal" android:gravity="center_vertical">
+                                    <EditText android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@null" android:gravity="center" android:hint="00" android:textSize="14sp" android:textColor="#333333" android:inputType="number" />
+                                    <Spinner android:layout_width="wrap_content" android:layout_height="match_parent" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_add_exercicio_b"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adicionar Exercício"
+                        android:textColor="#142193"
+                        app:icon="@android:drawable/ic_input_add"
+                        app:iconTint="#142193" />
                 </LinearLayout>
-            </LinearLayout>
-
-            <ImageButton
-                android:id="@+id/btn_add_exercicio_c"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/circulo_fundo_cinza"
-                android:src="@android:drawable/ic_input_add"
-                app:tint="#000000"
-                android:scaleType="centerInside"/>
+            </com.google.android.material.card.MaterialCardView>
 
             <!-- ============================== -->
-            <!-- OBSERVAÇÕES E VALIDADE         -->
+            <!-- CARD 4: TREINO C               -->
             <!-- ============================== -->
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Observações"
-                android:textColor="#FFFFFF"
-                android:layout_marginTop="24dp"/>
-
-            <EditText
-                android:id="@+id/edit_observacoes"
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:background="#3949AB"
-                android:gravity="top|start"
-                android:inputType="textMultiLine"
-                android:padding="8dp"
-                android:textColor="#FFFFFF"
-                android:layout_marginTop="8dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Validade da ficha"
-                android:textColor="#FFFFFF"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeWidth="0dp">
 
-            <!-- focusable="false" impede que o teclado abra. O clique deve ser capturado no Kotlin/Java -->
-            <EditText
-                android:id="@+id/edit_validade"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Treino C"
+                        android:textColor="#142193"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp"
+                        android:paddingHorizontal="4dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.5" android:text="Exercícios" android:textColor="#888888" android:textSize="12sp" android:textStyle="bold" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Série" android:textColor="#888888" android:textSize="12sp" android:textStyle="bold" android:textAlignment="center"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Rep" android:textColor="#888888" android:textSize="12sp" android:textStyle="bold" android:textAlignment="center"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Carg" android:textColor="#888888" android:textSize="12sp" android:textStyle="bold" android:textAlignment="center"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:text="Desc" android:textColor="#888888" android:textSize="12sp" android:textStyle="bold" android:textAlignment="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/container_exercicios_c"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            app:cardBackgroundColor="#F5F7FA"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:paddingVertical="4dp">
+
+                                <EditText android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="2.5" android:background="@null" android:paddingHorizontal="8dp" android:textSize="14sp" android:textColor="#333333" android:inputType="text" android:hint="Nome"/>
+                                <View android:layout_width="1dp" android:layout_height="24dp" android:background="#D0D6E0" />
+                                <EditText android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@null" android:textAlignment="center" android:textSize="14sp" android:textColor="#333333" android:inputType="number" android:hint="0"/>
+                                <View android:layout_width="1dp" android:layout_height="24dp" android:background="#D0D6E0" />
+                                <EditText android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@null" android:textAlignment="center" android:textSize="14sp" android:textColor="#333333" android:inputType="number" android:hint="0"/>
+                                <View android:layout_width="1dp" android:layout_height="24dp" android:background="#D0D6E0" />
+                                <EditText android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@null" android:textAlignment="center" android:textSize="14sp" android:textColor="#333333" android:inputType="numberDecimal" android:hint="0.0"/>
+                                <View android:layout_width="1dp" android:layout_height="24dp" android:background="#D0D6E0" />
+                                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2" android:orientation="horizontal" android:gravity="center_vertical">
+                                    <EditText android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@null" android:gravity="center" android:hint="00" android:textSize="14sp" android:textColor="#333333" android:inputType="number" />
+                                    <Spinner android:layout_width="wrap_content" android:layout_height="match_parent" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_add_exercicio_c"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adicionar Exercício"
+                        android:textColor="#142193"
+                        app:icon="@android:drawable/ic_input_add"
+                        app:iconTint="#142193" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ============================== -->
+            <!-- CARD 5: OBSERVAÇÕES E VALIDADE -->
+            <!-- ============================== -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="#3949AB"
-                android:focusable="false"
-                android:clickable="true"
-                android:hint="DD/MM/AAAA"
-                android:paddingHorizontal="8dp"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#88FFFFFF"
-                android:layout_marginTop="8dp"/>
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Observação"
+                        android:textColor="#142193"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        app:boxStrokeColor="#142193"
+                        app:hintTextColor="#142193">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_observacoes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minLines="3"
+                            android:gravity="top|start"
+                            android:hint="Observações adicionais"
+                            android:inputType="textMultiLine" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxStrokeColor="#142193"
+                        app:hintTextColor="#142193"
+                        app:startIconDrawable="@android:drawable/ic_menu_today"
+                        app:startIconTint="#142193">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_validade"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:clickable="true"
+                            android:hint="Validade da ficha (DD/MM/AAAA)" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
             <!-- ============================== -->
             <!-- BOTÕES CANCELAR E ENVIAR       -->
@@ -346,28 +498,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="32dp"
-                android:layout_marginBottom="16dp">
+                android:weightSum="2">
 
-                <Button
-                    android:id="@+id/btn_enviar"
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_cancelar"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="55dp"
                     android:layout_weight="1"
                     android:layout_marginEnd="8dp"
-                    android:backgroundTint="#FFFFFF"
-                    android:text="Enviar"
-                    android:textColor="#000000" />
+                    android:text="Cancelar"
+                    android:textColor="#FFFFFF"
+                    app:strokeColor="#FFFFFF" />
 
-                <Button
-                    android:id="@+id/btn_cancelar"
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_enviar"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="55dp"
                     android:layout_weight="1"
                     android:layout_marginStart="8dp"
                     android:backgroundTint="#FFFFFF"
-                    android:text="Cancelar"
-                    android:textColor="#000000" />
+                    android:text="Enviar"
+                    android:textColor="#142193" />
             </LinearLayout>
 
         </LinearLayout>
