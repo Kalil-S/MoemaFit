@@ -19,7 +19,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Logo e Texto da Instituição -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,7 +45,6 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- Menu Hamburguer -->
         <ImageButton
             android:id="@+id/btn_menu"
             android:layout_width="48dp"
@@ -61,13 +59,13 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- ============================== -->
-    <!-- CONTAINER AZUL (TELA DE FEEDBACKS) -->
+    <!-- CONTAINER BRANCO (TELA DE FEEDBACKS) -->
     <!-- ============================== -->
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
-        app:cardBackgroundColor="#0A42E4"
+        app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="24dp"
         app:cardElevation="8dp"
         app:strokeWidth="0dp"
@@ -94,7 +92,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Feedbacks"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#0A42E4"
                     android:textSize="24sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -111,7 +109,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:tint="#FFFFFF" />
+                    app:tint="#555555" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <!-- ÁREA DE ROLAGEM DA LISTA -->
@@ -121,7 +119,6 @@
                 android:clipToPadding="false"
                 android:paddingBottom="64dp"
                 android:scrollbars="none">
-                <!-- 👆 Aumentamos o paddingBottom para compensar o bloco que colocamos no fundo da tela -->
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -147,7 +144,7 @@
                             android:layout_height="wrap_content"
                             android:text="16/09/2026"
                             android:gravity="end"
-                            android:textColor="#B3FFFFFF"
+                            android:textColor="#A0A0A0"
                             android:textSize="14sp" />
 
                         <TextView
@@ -155,7 +152,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="Esteira danificada,"
-                            android:textColor="#FFFFFF"
+                            android:textColor="#333333"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -163,7 +160,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="por Mathues Nunes S"
-                            android:textColor="#99C2FF"
+                            android:textColor="#888888"
                             android:textSize="14sp" />
 
                         <TextView
@@ -171,16 +168,17 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:text="Tentei ligar a esteira mas não funcionou, mas a telinha não mostrava nada."
-                            android:textColor="#E0E0E0"
+                            android:textColor="#555555"
                             android:textSize="15sp" />
 
+                        <!-- TAG DE FOTO ANEXADA COM ESTILO CLARO -->
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:layout_gravity="end"
                             android:background="@drawable/shape_circulo_branco"
-                            android:backgroundTint="#2459F0"
+                            android:backgroundTint="#F0F4FF"
                             android:gravity="center_vertical"
                             android:paddingHorizontal="12dp"
                             android:paddingVertical="6dp">
@@ -189,24 +187,25 @@
                                 android:layout_width="14dp"
                                 android:layout_height="14dp"
                                 android:src="@android:drawable/ic_menu_camera"
-                                app:tint="#FFFFFF" />
+                                app:tint="#0A42E4" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="6dp"
                                 android:text="Foto anexada"
-                                android:textColor="#FFFFFF"
+                                android:textColor="#0A42E4"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
 
+                    <!-- DIVISOR -->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginHorizontal="24dp"
-                        android:background="#33FFFFFF" />
+                        android:background="#EAEAEA" />
 
                     <!-- ============================== -->
                     <!-- ITEM DE FEEDBACK 2 -->
@@ -227,7 +226,7 @@
                             android:layout_height="wrap_content"
                             android:text="02/09/2026"
                             android:gravity="end"
-                            android:textColor="#B3FFFFFF"
+                            android:textColor="#A0A0A0"
                             android:textSize="14sp" />
 
                         <TextView
@@ -235,7 +234,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="Atualização da ficha,"
-                            android:textColor="#FFFFFF"
+                            android:textColor="#333333"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -243,7 +242,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="por Lorem ipsum"
-                            android:textColor="#99C2FF"
+                            android:textColor="#888888"
                             android:textSize="14sp" />
 
                         <TextView
@@ -251,7 +250,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:text="Lorem Ipsum dolor sit amet"
-                            android:textColor="#E0E0E0"
+                            android:textColor="#555555"
                             android:textSize="15sp" />
                     </LinearLayout>
 
@@ -259,7 +258,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginHorizontal="24dp"
-                        android:background="#33FFFFFF" />
+                        android:background="#EAEAEA" />
 
                     <!-- ============================== -->
                     <!-- ITEM DE FEEDBACK 3 -->
@@ -280,7 +279,7 @@
                             android:layout_height="wrap_content"
                             android:text="31/08/2026"
                             android:gravity="end"
-                            android:textColor="#B3FFFFFF"
+                            android:textColor="#A0A0A0"
                             android:textSize="14sp" />
 
                         <TextView
@@ -288,7 +287,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="Teria como ter mais aulas de spinning?,"
-                            android:textColor="#FFFFFF"
+                            android:textColor="#333333"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -296,7 +295,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="por consectetur adipiscr."
-                            android:textColor="#99C2FF"
+                            android:textColor="#888888"
                             android:textSize="14sp" />
 
                         <TextView
@@ -304,7 +303,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:text="Gostei muito da aula de spinning, teria como ter mais aulas ? Acho que seria uma boa para academia a universdidade!"
-                            android:textColor="#E0E0E0"
+                            android:textColor="#555555"
                             android:textSize="15sp" />
                     </LinearLayout>
 
@@ -312,7 +311,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginHorizontal="24dp"
-                        android:background="#33FFFFFF" />
+                        android:background="#EAEAEA" />
 
                     <!-- ============================== -->
                     <!-- ITEM DE FEEDBACK 4 -->
@@ -333,7 +332,7 @@
                             android:layout_height="wrap_content"
                             android:text="16/08/2026"
                             android:gravity="end"
-                            android:textColor="#B3FFFFFF"
+                            android:textColor="#A0A0A0"
                             android:textSize="14sp" />
 
                         <TextView
@@ -341,7 +340,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="Lorem ipsum,"
-                            android:textColor="#FFFFFF"
+                            android:textColor="#333333"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -349,7 +348,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="por consectetur adipiscr."
-                            android:textColor="#99C2FF"
+                            android:textColor="#888888"
                             android:textSize="14sp" />
 
                         <TextView
@@ -357,7 +356,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-                            android:textColor="#E0E0E0"
+                            android:textColor="#555555"
                             android:textSize="15sp" />
                     </LinearLayout>
 
@@ -367,13 +366,12 @@
     </com.google.android.material.card.MaterialCardView>
 
     <!-- ============================== -->
-    <!-- TRUQUE DE LAYOUT: BLOCO AZUL   -->
+    <!-- TRUQUE DE LAYOUT: BLOCO BRANCO -->
     <!-- ============================== -->
-    <!-- Este bloco fica colado na parte de baixo da tela, cobrindo exatamente os cantos arredondados do CardView e garantindo que o fim da tela seja totalmente reto. -->
     <View
         android:layout_width="match_parent"
         android:layout_height="32dp"
-        android:background="#0A42E4"
+        android:background="#FFFFFF"
         android:elevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
