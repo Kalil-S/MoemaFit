@@ -72,7 +72,6 @@
         app:layout_constraintBottom_toTopOf="@+id/bottom_nav_mock"
         app:layout_constraintTop_toBottomOf="@+id/toolbarLayout">
 
-        <!-- clipToPadding="false" no LinearLayout para garantir que a sombra nova não seja cortada -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -82,9 +81,7 @@
             android:paddingTop="8dp"
             android:paddingBottom="16dp">
 
-            <!-- ============================== -->
-            <!-- CARD DO CALENDÁRIO (HERÓI)     -->
-            <!-- ============================== -->
+            <!-- CARD DO CALENDÁRIO (HERÓI) -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -178,9 +175,7 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- ============================== -->
-            <!-- CARD DE FEEDBACKS (ATUALIZADO) -->
-            <!-- ============================== -->
+            <!-- CARD DE FEEDBACKS -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -191,7 +186,6 @@
                 app:cardElevation="12dp"
                 app:strokeColor="#E2E8F0"
                 app:strokeWidth="1dp">
-                <!-- Elevação alta (12dp) e borda super sutil para destacar do fundo perfeitamente -->
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -199,7 +193,6 @@
                     android:orientation="vertical"
                     android:padding="24dp">
 
-                    <!-- Cabeçalho Feedbacks -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -228,43 +221,17 @@
                             android:textStyle="bold" />
                     </LinearLayout>
 
-                    <!-- ITEM DE FEEDBACK 1 -->
+                    <!-- ITEM 1 -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="16 de Setembro, 2026"
-                            android:textColor="#A0A0A0"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:text="Esteira danificada"
-                            android:textColor="#333333"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Por Mathues Nunes S."
-                            android:textColor="#888888"
-                            android:textSize="13sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Tentei ligar a esteira mas não funcionou, mas a telinha não mostrava nada."
-                            android:textColor="#555555"
-                            android:textSize="14sp" />
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="16 de Setembro, 2026" android:textColor="#A0A0A0" android:textSize="12sp" />
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Esteira danificada" android:textColor="#333333" android:textSize="16sp" android:textStyle="bold" />
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Por Mathues Nunes S." android:textColor="#888888" android:textSize="13sp" />
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Tentei ligar a esteira mas não funcionou, mas a telinha não mostrava nada." android:textColor="#555555" android:textSize="14sp" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -276,65 +243,22 @@
                             android:paddingHorizontal="12dp"
                             android:paddingVertical="6dp">
 
-                            <ImageView
-                                android:layout_width="14dp"
-                                android:layout_height="14dp"
-                                android:src="@android:drawable/ic_menu_camera"
-                                app:tint="#0A42E4" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="6dp"
-                                android:text="1 anexo"
-                                android:textColor="#0A42E4"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
+                            <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@android:drawable/ic_menu_camera" app:tint="#0A42E4" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:text="1 anexo" android:textColor="#0A42E4" android:textSize="12sp" android:textStyle="bold" />
                         </LinearLayout>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginTop="16dp"
-                            android:background="#EAEAEA" />
+                        <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="16dp" android:background="#EAEAEA" />
                     </LinearLayout>
 
-                    <!-- ITEM DE FEEDBACK 2 -->
+                    <!-- ITEM 2 -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="02 de Setembro, 2026"
-                            android:textColor="#A0A0A0"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:text="Teria como atualizar minha ficha?"
-                            android:textColor="#333333"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Por Lorem ipsum"
-                            android:textColor="#888888"
-                            android:textSize="13sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Lorem Ipsum dolor sit amet, consectetur adipiscing elit."
-                            android:textColor="#555555"
-                            android:textSize="14sp" />
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="02 de Setembro, 2026" android:textColor="#A0A0A0" android:textSize="12sp" />
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Teria como atualizar minha ficha?" android:textColor="#333333" android:textSize="16sp" android:textStyle="bold" />
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Por Lorem ipsum" android:textColor="#888888" android:textSize="13sp" />
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Lorem Ipsum dolor sit amet, consectetur adipiscing elit." android:textColor="#555555" android:textSize="14sp" />
                     </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -343,7 +267,7 @@
     </ScrollView>
 
     <!-- ============================== -->
-    <!-- RODAPÉ (Navegação Inferior)    -->
+    <!-- RODAPÉ (Navegação Inferior com 4 Itens) -->
     <!-- ============================== -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/bottom_nav_mock"
@@ -362,6 +286,7 @@
             android:baselineAligned="false"
             android:orientation="horizontal">
 
+            <!-- Item 1 -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -382,10 +307,11 @@
                     android:layout_height="wrap_content"
                     android:text="Aula coletiva"
                     android:textColor="#888888"
-                    android:textSize="12sp"
+                    android:textSize="11sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
+            <!-- Item 2 -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -406,10 +332,36 @@
                     android:layout_height="wrap_content"
                     android:text="Criar ficha"
                     android:textColor="#888888"
-                    android:textSize="12sp"
+                    android:textSize="11sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
+            <!-- NOVO ITEM 4: PRÉ-CADASTRO (Cadastrar) -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="4dp"
+                    android:src="@drawable/adicionar_usuario"
+                    app:tint="#888888" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cadastrar"
+                    android:textColor="#888888"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Item 3 -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -430,9 +382,10 @@
                     android:layout_height="wrap_content"
                     android:text="Buscar"
                     android:textColor="#888888"
-                    android:textSize="12sp"
+                    android:textSize="11sp"
                     android:textStyle="bold" />
             </LinearLayout>
+
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
