@@ -47,11 +47,11 @@ O Moema Fit foi projetado para preencher lacunas de usabilidade deixadas do merc
 | **Treino offline** | ✅ | ✅ | ✅ |
 | Feed social | ✅ | ✅ | ❌ |
 | Chamar convidados | ✅ | ❌ | ❌ |
-| **Metas Pessoais** | ❌ | ❌ | **✅ Exclusivo** |
-| **Streak semanal (Engajamento)** | ❌ | ❌ | **✅ Exclusivo** |
-| **GIF's offline** | ❌ | ❌ | **✅ Exclusivo** |
-| **Abrir chamado para aparelho danificado**| ❌ | ❌ | **✅ Exclusivo** |
-| **Feedback integrado** | ❌ | ❌ | **✅ Exclusivo** |
+| **Metas Pessoais** | ❌ | ❌ | ✅ |
+| **Streak semanal (Engajamento)** | ❌ | ❌ | ✅ |
+| **GIF's offline** | ❌ | ❌ | ✅ |
+| **Abrir chamado para aparelho danificado**| ❌ | ❌ | ✅ |
+| **Feedback integrado** | ❌ | ❌ | ✅ |
 
 ---
 
