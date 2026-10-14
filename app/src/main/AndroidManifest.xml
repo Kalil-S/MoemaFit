@@ -25,6 +25,10 @@
         <activity android:name=".MenuActivity" android:exported="true" />
         <activity android:name=".ConfiguracoesActivity" android:exported="true" />
         <activity android:name=".RedefinirSenhaActivity" android:exported="true" />
+        <activity android:name=".MenuAlunoActivity" android:exported="true" />
+        <activity android:name=".DetalhesAulaActivity" android:exported="true" />
+        <activity android:name=".AlunoAchadoActivity" android:exported="true" />
+
     </application>
 
 </manifest>
