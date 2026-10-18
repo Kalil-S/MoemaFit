@@ -9,37 +9,30 @@ UNIFOR. O projeto atente a comunidade acadêmica quanto ao público externo, int
 ---
 
 ## Sobre o projeto
-O avanço das tecnologias móveis possibilita a melhoria de serviços e a gestão de espaços no ambiente acadêmico. O Moema Fit surge para substituir e otimizar soluções digitais pré-existentes,
-centralizando o acesso às fichas de treino e estruturando o fluxo de trabalho dos profissionais de educação física.
 
-Através da aplicação, o **professor** pode buscar usuários matriculados e prescrever fichas personalizadas em tempo real e lançar o aluno no sistema. Já o **praticante** (aluno)
-tem acesso à sua rotina de exercícios, mídias demonstrativas, checklists de exceção e gerenciamento de metas pessoais, tudo com suporte a funcionalidades offline.
+O **Moema Fit** é um aplicativo nativo para Android, desenvolvido em Kotlin, voltado à gestão e ao acompanhamento de treinos físicos na academia da Universidade de Fortaleza (UNIFOR). O projeto busca atender tanto à comunidade acadêmica quanto ao público externo, integrando Alunos, Visitantes e Professores em uma única plataforma digital.
 
-### Objetivos
-- Desenvolver uma ferramenta mobile funcional e documentada que otimize a consulta de exercícios.
-- Promover autonomia e praticidade na rotina de saúde dos usuários.
-- Auxiliar na organização e prescrição de fichas pelos professores.
-- Aplicar conceitos sólidos de Engenharia de Software e desenvolvimento nativo.
+O sistema permite que o **professor realize o pré-cadastro dos Alunos e Visitantes**, disponibilizando seus registros para que cada praticante realize o primeiro acesso, ative sua conta e defina suas próprias credenciais. Após a ativação, o usuário pode consultar suas fichas de treino, visualizar demonstrações dos exercícios e registrar as atividades realizadas. Já o professor pode pesquisar os praticantes cadastrados, elaborar fichas personalizadas e disponibilizá-las no aplicativo.
 
 ---
 
 ## Funcionalidades
-O escopo do Moema Fit foi definido após um rigoroso benchmark com aplicativos líderes de mercado (como Smart Fit e Greenlife), destacando-se por focar nas necessidades reais do ambiente
-universitário.
 
 ### Para Alunos e Visitantes
-- **Fichas de treino:** Acompanhamento de exercícios com carga e checklists de execução.
-- **Mídias offline:** Acesso a GIFs demonstrativas da execução dos exercícios mesmo sem internet.
-- **Treino Offline:** Visualização e execução das fichas sem necessidade de conexão constante à rede.
-- **Engajamento e Saúde:** Controle de *Streak semanal* (frequência) e acompanhamento de **Metas Pessoais**.
-- **Aulas Coletivas:** Catálogo e acompanhamento das aulas em grupo.
-- **Zeladoria e Manutenção:** Sistema ágil para abrir chamados sobre aparelhos danificados na academia.
-- **Feedback:** Canal de comunicação para avaliação da experiência.
 
-### Para professores
-- **Gestão de alunos:** Busca ágil por alunos e visitantes previamente matriculados no sistema.
-- **Prescrição dinâmica:** Estruturação e atualização de fichas personalizadas de forma centralizada e em tempo real.
-- **Lançamento de aluno:** Cadastro do aluno e lançamento do aluno para utilização do aplicativo.
+- **Primeiro acesso:** ativação da conta previamente cadastrada pelo professor e definição das credenciais de acesso.
+- **Fichas de treino:** consulta aos exercícios prescritos pelo professor.
+- **Demonstração de exercícios:** acesso a mídias demonstrativas para auxiliar na execução dos movimentos.
+- **Checklist de execução:** registro dos exercícios concluídos durante o treino.
+- **Metas pessoais:** acompanhamento das metas de saúde previstas no escopo do projeto.
+
+### Para Professores
+
+- **Pré-cadastro de praticantes:** registro prévio dos Alunos e Visitantes para habilitar a ativação de suas contas no aplicativo.
+- **Busca de usuários:** localização de praticantes previamente cadastrados por meio de pesquisa.
+- **Consulta de informações:** visualização dos dados dos praticantes encontrados.
+- **Gestão de fichas de treino:** criação e edição de fichas personalizadas.
+- **Disponibilização de fichas:** envio ou publicação das fichas para consulta pelos respectivos praticantes no aplicativo.
 
 ## 📊 Benchmark: Moema Fit vs Mercado
 
@@ -54,11 +47,11 @@ O Moema Fit foi projetado para preencher lacunas de usabilidade deixadas do merc
 | **Treino offline** | ✅ | ✅ | ✅ |
 | Feed social | ✅ | ✅ | ❌ |
 | Chamar convidados | ✅ | ❌ | ❌ |
-| **Metas Pessoais** | ❌ | ❌ | **✅ Exclusivo** |
-| **Streak semanal (Engajamento)** | ❌ | ❌ | **✅ Exclusivo** |
-| **GIF's offline** | ❌ | ❌ | **✅ Exclusivo** |
-| **Abrir chamado para aparelho danificado**| ❌ | ❌ | **✅ Exclusivo** |
-| **Feedback integrado** | ❌ | ❌ | **✅ Exclusivo** |
+| **Metas Pessoais** | ❌ | ❌ | ✅ |
+| **Streak semanal (Engajamento)** | ❌ | ❌ | ✅ |
+| **GIF's offline** | ❌ | ❌ | ✅ |
+| **Abrir chamado para aparelho danificado**| ❌ | ❌ | ✅ |
+| **Feedback integrado** | ❌ | ❌ | ✅ |
 
 ---
 
