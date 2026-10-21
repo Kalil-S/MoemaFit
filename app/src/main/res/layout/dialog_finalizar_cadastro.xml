@@ -1,0 +1,64 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp"
+    android:background="@drawable/bg_popup">
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@android:drawable/ic_dialog_info"
+        android:tint="#004AF0"
+        android:contentDescription="Confirmação" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Finalizar cadastro?"
+        android:textColor="#004AF0"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Confira seus dados antes de continuar. Deseja concluir seu cadastro no MoeMaFit?"
+        android:textColor="#555555"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConfirmarCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:text="Sim, finalizar cadastro"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:backgroundTint="#004AF0"
+        app:cornerRadius="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCancelarCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:text="Voltar e revisar dados"
+        android:textColor="#004AF0"
+        android:textSize="15sp"
+        android:backgroundTint="#FFFFFF"
+        app:cornerRadius="12dp"
+        app:strokeColor="#004AF0"
+        app:strokeWidth="1dp" />
+
+</LinearLayout>
