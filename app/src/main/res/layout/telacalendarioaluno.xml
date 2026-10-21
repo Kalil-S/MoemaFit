@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4F1EA"
+    android:paddingTop="36dp"
+    tools:context=".TelaCalendarioAluno">
+
+    <!-- Topo / Header Moderno (Logo na esquerda, Menu hambúrguer na direita) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp">
+
+        <ImageButton
+            android:id="@+id/imgLogoUnifor"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_unifor_logo" />
+
+        <!-- Espaço vazio para empurrar o menu totalmente para a direita -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/imgMenu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_menu" />
+    </LinearLayout>
+
+    <!-- Seção de Streak / Fogo Centralizada -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="12dp">
+
+        <ImageView
+            android:id="@+id/imgFire"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_local_fire"
+            app:tint="#111111" />
+
+        <TextView
+            android:id="@+id/txtStreak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Streak: 0"
+            android:textColor="#111111"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Cartão Azul Principal do Calendário (Com bordas arredondadas e design moderno) -->
+    <LinearLayout
+        android:id="@+id/cardCalendario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_card_azul"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Botão de Calendário no Canto Superior Direito do Card -->
+        <ImageButton
+            android:id="@+id/btnCalendarioTopo"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="end"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_calendar"
+            app:tint="#FFFFFF" />
+
+        <!-- Grade de Dias com TableLayout -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:stretchColumns="0,1,2,3,4">
+
+            <!-- Semana 1 -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="14dp">
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Qua" android:textColor="#E0E0E0" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="16" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+                    <View android:layout_width="5dp" android:layout_height="5dp" android:layout_marginTop="3dp" android:background="@drawable/bg_white_dot"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Qui" android:textColor="#E0E0E0" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="17" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+                    <View android:layout_width="5dp" android:layout_height="5dp" android:layout_marginTop="3dp" android:background="@drawable/bg_white_dot"/>
+                </LinearLayout>
+
+                <!-- Sex 18: Botão de Halter Clicável -->
+                <LinearLayout
+                    android:id="@+id/btnDia18"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="2dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sex" android:textColor="#E0E0E0" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="18" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+                    <ImageView android:layout_width="16dp" android:layout_height="16dp" android:layout_marginTop="3dp" android:src="@drawable/ic_fitness" app:tint="#FFFFFF"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sab" android:textColor="#E0E0E0" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="19" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+                    <View android:layout_width="5dp" android:layout_height="5dp" android:layout_marginTop="3dp" android:background="@drawable/bg_white_dot"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dom" android:textColor="#E0E0E0" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+                    <View android:layout_width="5dp" android:layout_height="5dp" android:layout_marginTop="3dp" android:background="@drawable/bg_white_dot"/>
+                </LinearLayout>
+            </TableRow>
+
+            <!-- Semana 2 -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="14dp">
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Seg" android:textColor="#E0E0E0" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="21" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+                    <View android:layout_width="5dp" android:layout_height="5dp" android:layout_marginTop="3dp" android:background="@drawable/bg_white_dot"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ter" android:textColor="#E0E0E0" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="22" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+                    <View android:layout_width="5dp" android:layout_height="5dp" android:layout_marginTop="3dp" android:background="@drawable/bg_white_dot"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Qua" android:textColor="#E0E0E0" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="23" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+                    <View android:layout_width="5dp" android:layout_height="5dp" android:layout_marginTop="3dp" android:background="@drawable/bg_white_dot"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Qui" android:textColor="#E0E0E0" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="24" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+                    <View android:layout_width="5dp" android:layout_height="5dp" android:layout_marginTop="3dp" android:background="@drawable/bg_white_dot"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sex" android:textColor="#E0E0E0" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="25" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+                    <View android:layout_width="5dp" android:layout_height="5dp" android:layout_marginTop="3dp" android:background="@drawable/bg_white_dot"/>
+                </LinearLayout>
+            </TableRow>
+
+            <!-- Semana 3 -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="14dp">
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sab" android:textColor="#E0E0E0" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="26" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+                    <View android:layout_width="5dp" android:layout_height="5dp" android:layout_marginTop="3dp" android:background="@drawable/bg_white_dot"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dom" android:textColor="#E0E0E0" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="27" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+                    <View android:layout_width="5dp" android:layout_height="5dp" android:layout_marginTop="3dp" android:background="@drawable/bg_white_dot"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Seg" android:textColor="#E0E0E0" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="28" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+                    <View android:layout_width="5dp" android:layout_height="5dp" android:layout_marginTop="3dp" android:background="@drawable/bg_white_dot"/>
+                </LinearLayout>
+
+                <!-- Ter 29: Botão de Halter Clicável -->
+                <LinearLayout
+                    android:id="@+id/btnDia29"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="2dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ter" android:textColor="#E0E0E0" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="29" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+                    <ImageView android:layout_width="16dp" android:layout_height="16dp" android:layout_marginTop="3dp" android:src="@drawable/ic_fitness" app:tint="#FFFFFF"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Qua" android:textColor="#E0E0E0" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="30" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+                    <View android:layout_width="5dp" android:layout_height="5dp" android:layout_marginTop="3dp" android:background="@drawable/bg_white_dot"/>
+                </LinearLayout>
+            </TableRow>
+
+            <!-- Semana 4 -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Qui" android:textColor="#80B3FF" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="01" android:textColor="#80B3FF" android:textSize="15sp" android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sex" android:textColor="#80B3FF" android:textSize="13sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="02" android:textColor="#80B3FF" android:textSize="15sp" android:textStyle="bold"/>
+                </LinearLayout>
+
+                <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+                <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+                <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+    <!-- Espaço flexível para empurrar o botão de pontos para o rodapé -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Botão Inferior "Pontos" -->
+    <Button
+        android:id="@+id/btnPontos"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#0033CC"
+        android:text="Pontos"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="16dp" />
+
+</LinearLayout>

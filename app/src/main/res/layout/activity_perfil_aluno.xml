@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4F1EA"
+    android:paddingTop="36dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="16dp">
+
+    <!-- TOPO: Logo Unifor e Menu Hambúrguer -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="12dp">
+
+        <ImageButton
+            android:id="@+id/imgLogoUnifor"
+            android:layout_width="90dp"
+            android:layout_height="56dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_unifor_logo"
+            android:contentDescription="Logo Unifor" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/imgMenu"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_menu"
+            android:contentDescription="Menu" />
+    </LinearLayout>
+
+    <!-- CARTÃO CENTRAL DE PERFIL DO ALUNO -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_card_azul"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center_horizontal">
+
+        <!-- Header do Perfil: Avatar + Nome + Email -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/imgFotoPerfil"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_fitness"
+                android:contentDescription="Foto do Perfil" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:id="@+id/txtNomeAluno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fulano de Tal da Silva"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtEmailAluno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="fulano@email.com"
+                    android:textColor="#D0E0FF"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Divisor sutil -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#40FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Card interno de Informações Físicas / Treino -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#10FFFFFF"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/txtPeso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PESO : 100 KG"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/txtAltura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ALTURA: 1.70 M"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/txtTreino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TREINO: HIPERTROFIA / PERDA DE GORDURA"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/txtGorduraAbdominal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GORDURA ABDOMINAL: 45%"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/txtMassaCorporal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MASSA CORPORAL: 30%"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/txtItens"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Itens: Nenhum equipado"
+                android:textColor="#E0E0E0"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Botões de Ação de Perfil -->
+        <Button
+            android:id="@+id/btnHistoricoFichas"
+            android:layout_width="220dp"
+            android:layout_height="48dp"
+            android:text="Histórico de Fichas"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#0B3B60"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnRedefinirSenha"
+            android:layout_width="220dp"
+            android:layout_height="48dp"
+            android:text="Redefinir Senha"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#0B3B60"
+            android:layout_marginBottom="12dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Botão Voltar -->
+        <Button
+            android:id="@+id/btnVoltarPerfil"
+            android:layout_width="160dp"
+            android:layout_height="44dp"
+            android:text="Voltar"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#0B3B60" />
+
+    </LinearLayout>
+
+</LinearLayout>
