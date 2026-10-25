@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/btn_voltar"
+            android:id="@+id/btn_voltar_detalhes_coletiva"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginStart="8dp"

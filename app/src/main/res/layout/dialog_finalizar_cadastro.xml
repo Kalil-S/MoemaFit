@@ -1,64 +1,85 @@
-
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Fundo escuro semi-transparente que ocupa a tela toda -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
-    android:padding="24dp"
-    android:background="@drawable/bg_popup">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:src="@android:drawable/ic_dialog_info"
-        android:tint="#004AF0"
-        android:contentDescription="Confirmação" />
-
-    <TextView
+    <!-- CARTÃO DO DIÁLOGO CENTRALIZADO -->
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Finalizar cadastro?"
-        android:textColor="#004AF0"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:gravity="center" />
+        android:layout_marginHorizontal="24dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:strokeWidth="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"> <!-- Essas 4 linhas grudam o cartão no centro! -->
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Confira seus dados antes de continuar. Deseja concluir seu cadastro no MoeMaFit?"
-        android:textColor="#555555"
-        android:textSize="15sp"
-        android:gravity="center"
-        android:lineSpacingExtra="4dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="24dp">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnConfirmarCadastro"
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_marginTop="24dp"
-        android:text="Sim, finalizar cadastro"
-        android:textColor="#FFFFFF"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:backgroundTint="#004AF0"
-        app:cornerRadius="12dp" />
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@android:drawable/ic_dialog_info"
+                app:tint="#004AF0"
+                android:contentDescription="Confirmação" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnCancelarCadastro"
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_marginTop="8dp"
-        android:text="Voltar e revisar dados"
-        android:textColor="#004AF0"
-        android:textSize="15sp"
-        android:backgroundTint="#FFFFFF"
-        app:cornerRadius="12dp"
-        app:strokeColor="#004AF0"
-        app:strokeWidth="1dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Finalizar cadastro?"
+                android:textColor="#004AF0"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:gravity="center" />
 
-</LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Confira seus dados antes de continuar. Deseja concluir seu cadastro no MoemaFit?"
+                android:textColor="#555555"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:lineSpacingExtra="4dp" />
+
+            <!-- Mantive seus botões empilhados (um em cima do outro), pois o texto deles é longo e fica melhor assim! -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConfirmarCadastro"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="24dp"
+                android:text="Sim, finalizar cadastro"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:backgroundTint="#004AF0"
+                app:cornerRadius="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancelarCadastro"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="8dp"
+                android:text="Voltar e revisar dados"
+                android:textColor="#004AF0"
+                android:textSize="15sp"
+                app:backgroundTint="#FFFFFF"
+                app:cornerRadius="12dp"
+                app:strokeColor="#004AF0"
+                app:strokeWidth="1dp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

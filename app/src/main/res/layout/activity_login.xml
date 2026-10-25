@@ -126,7 +126,7 @@
 
                     <!-- Botão Entrar -->
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/button"
+                        android:id="@+id/button_entrar_login"
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:backgroundTint="#004AF0"
@@ -146,7 +146,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:layout_marginBottom="16dp"
-                android:text="Não possui cadastro? Cadastre-se aqui"
+                android:text="Primeiro login? Clique aqui"
                 android:textColor="#FFFFFF"
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"

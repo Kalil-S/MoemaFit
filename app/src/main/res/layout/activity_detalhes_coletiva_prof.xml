@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/btn_voltar"
+            android:id="@+id/btn_voltar_aula_coletiva_prof"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginStart="8dp"
@@ -34,7 +34,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Detalhes da Aula"
+            android:text="Gerenciar Aula"
             android:textColor="#0A42E4"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -45,7 +45,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- ============================== -->
-    <!-- CONTEÚDO SCROLLÁVEL            -->
+    <!-- CONTEÚDO SCROLLÁVEL (Igual ao do aluno) -->
     <!-- ============================== -->
     <ScrollView
         android:layout_width="match_parent"
@@ -53,7 +53,7 @@
         android:clipToPadding="false"
         android:paddingBottom="24dp"
         android:scrollbars="none"
-        app:layout_constraintBottom_toTopOf="@+id/footer_participar"
+        app:layout_constraintBottom_toTopOf="@+id/footer_acoes_prof"
         app:layout_constraintTop_toBottomOf="@+id/toolbarLayout">
 
         <LinearLayout
@@ -77,7 +77,7 @@
                     android:orientation="vertical"
                     android:padding="20dp">
 
-                    <!-- ESPAÇO RESERVADO PARA A FOTO (Placeholder) -->
+                    <!-- ESPAÇO RESERVADO PARA A FOTO -->
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
                         android:layout_height="160dp"
@@ -85,7 +85,6 @@
                         app:cardElevation="0dp"
                         app:strokeColor="#E2E8F0"
                         app:strokeWidth="1dp">
-
                         <ImageView
                             android:id="@+id/imgAula"
                             android:layout_width="match_parent"
@@ -108,34 +107,29 @@
                         android:textSize="24sp"
                         android:textStyle="bold" />
 
-                    <!-- PROFESSOR COM ÍCONE (CENTRALIZADO) -->
+                    <!-- PROFESSOR -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:gravity="center"
                         android:orientation="horizontal">
-
-                        <!-- Ícone de perfil cinza, combinando com o texto -->
                         <ImageView
                             android:layout_width="16dp"
                             android:layout_height="16dp"
                             android:src="@drawable/ic_person"
                             app:tint="#888888" />
-
                         <TextView
                             android:id="@+id/txtProfessor"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="6dp"
-                            android:text="Prof. Marcio Lima"
+                            android:text="Prof. Marcio Lima (Você)"
                             android:textColor="#888888"
                             android:textSize="14sp" />
                     </LinearLayout>
 
-                    <!-- ============================== -->
                     <!-- LINHA DE ÍCONES (Data, Sala, Vagas) -->
-                    <!-- ============================== -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -150,45 +144,19 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="28dp"
-                                android:layout_height="28dp"
-                                android:src="@drawable/ic_calendar"
-                                app:tint="#0A42E4" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:text="18 Set"
-                                android:textColor="#555555"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
+                            <ImageView android:layout_width="28dp" android:layout_height="28dp" android:src="@drawable/ic_calendar" app:tint="#0A42E4" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="18 Set" android:textColor="#555555" android:textSize="14sp" android:textStyle="bold" />
                         </LinearLayout>
 
-                        <!-- Local / Sala -->
+                        <!-- Sala -->
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="28dp"
-                                android:layout_height="28dp"
-                                android:src="@drawable/ic_location"
-                                app:tint="#0A42E4" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:text="Sala 4"
-                                android:textColor="#555555"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
+                            <ImageView android:layout_width="28dp" android:layout_height="28dp" android:src="@drawable/ic_location" app:tint="#0A42E4" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Sala 4" android:textColor="#555555" android:textSize="14sp" android:textStyle="bold" />
                         </LinearLayout>
 
                         <!-- Vagas -->
@@ -198,25 +166,11 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="28dp"
-                                android:layout_height="28dp"
-                                android:src="@drawable/ic_group"
-                                app:tint="#0A42E4" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:text="16/25"
-                                android:textColor="#555555"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
+                            <ImageView android:layout_width="28dp" android:layout_height="28dp" android:src="@drawable/ic_group" app:tint="#0A42E4" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="16/25" android:textColor="#555555" android:textSize="14sp" android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
 
-                    <!-- LINHA DIVISÓRIA -->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -231,7 +185,6 @@
                         android:textColor="#0A42E4"
                         android:textSize="16sp"
                         android:textStyle="bold" />
-
                     <TextView
                         android:id="@+id/txtDescricao"
                         android:layout_width="match_parent"
@@ -241,18 +194,16 @@
                         android:text="O spinning foca principalmente na melhoria da aptidão cardiorrespiratória (condicionamento do coração e pulmões) e na tonificação dos membros inferiores (glúteos, quadríceps, coxas e panturrilhas)."
                         android:textColor="#555555"
                         android:textSize="15sp" />
-
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
-
         </LinearLayout>
     </ScrollView>
 
     <!-- ============================== -->
-    <!-- RODAPÉ FIXO COM O BOTÃO        -->
+    <!-- RODAPÉ FIXO DO PROFESSOR       -->
     <!-- ============================== -->
     <LinearLayout
-        android:id="@+id/footer_participar"
+        android:id="@+id/footer_acoes_prof"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
@@ -262,15 +213,16 @@
         android:paddingVertical="16dp"
         app:layout_constraintBottom_toBottomOf="parent">
 
+        <!-- Botão contornado vermelho para "Cancelar Aula" -->
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnParticipar"
+            android:id="@+id/btnCancelarAula"
+            style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:backgroundTint="#0A42E4"
-            android:text="Participar"
+            android:text="Cancelar Aula"
+            android:textColor="#D32F2F"
             android:textSize="16sp"
-            android:textColor="#FFFFFF" />
-
+            app:strokeColor="#D32F2F" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

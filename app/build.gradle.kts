@@ -33,17 +33,26 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-}
+    applicationVariants.all {
+        val variant = this
+        outputs.all {
+            val output = this as com.android.build.gradle.internal.api.BaseVariantOutputImpl
 
-dependencies {
+            // Define o padrão do nome: Ex: MoemaFit_release_v1.0.apk
+            output.outputFileName = "MoemaFit_${variant.name}_v${variant.versionName}.apk"
+        }
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    implementation(libs.androidx.cardview)
-    androidTestImplementation(libs.androidx.espresso.core)
+        dependencies {
+
+            implementation(libs.androidx.core.ktx)
+            implementation(libs.androidx.appcompat)
+            implementation(libs.material)
+            implementation(libs.androidx.activity)
+            implementation(libs.androidx.constraintlayout)
+            testImplementation(libs.junit)
+            androidTestImplementation(libs.androidx.junit)
+            implementation(libs.androidx.cardview)
+            androidTestImplementation(libs.androidx.espresso.core)
+        }
+    }
 }

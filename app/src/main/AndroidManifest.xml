@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -27,7 +28,9 @@
         <activity android:name=".RedefinirSenhaActivity" android:exported="true" />
         <activity android:name=".MenuAlunoActivity" android:exported="true" />
         <activity android:name=".DetalhesAulaActivity" android:exported="true" />
-        <activity android:name=".AlunoAchadoActivity" android:exported="true" />
+        <activity android:name=".HomeProf" android:exported="true" />
+        <activity android:name=".PerfilProfessorActivity" android:exported="true" />
+        <activity android:name=".CriarFicha" android:exported="true" />
 
     </application>
 

@@ -35,11 +35,11 @@ class MenuAlunoActivity : AppCompatActivity() {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(R.layout.dialog_confirmar_sair)
 
-        dialog.findViewById<View>(R.id.btnSim).setOnClickListener {
+        dialog.findViewById<View>(R.id.btnSimSairConta).setOnClickListener {
             dialog.dismiss()
-            finishAffinity() // futuramente: encerrar sessão e ir para o login
+            finishAffinity()
         }
-        dialog.findViewById<View>(R.id.btnNao).setOnClickListener { dialog.dismiss() }
+        dialog.findViewById<View>(R.id.btnNaoSairConta).setOnClickListener { dialog.dismiss() }
 
         dialog.show()
         dialog.window?.apply {

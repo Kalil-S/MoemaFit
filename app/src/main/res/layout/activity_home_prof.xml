@@ -144,18 +144,42 @@
 
                         <!-- Dia 3 (Ativo) -->
                         <LinearLayout
+                            android:id="@+id/btn_aula_coletiva"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:layout_marginHorizontal="4dp"
                             android:background="@drawable/shape_circulo_branco"
                             android:backgroundTint="#FFFFFF"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
                             android:gravity="center"
                             android:orientation="vertical"
                             android:paddingVertical="6dp">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sex" android:textColor="#0A42E4" android:textSize="13sp" android:textStyle="bold" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2dp" android:text="18" android:textColor="#0A42E4" android:textSize="20sp" android:textStyle="bold" />
-                            <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/haltere" app:tint="#0A42E4" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sex"
+                                android:textColor="#0A42E4"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:text="18"
+                                android:textColor="#0A42E4"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:src="@drawable/haltere"
+                                app:tint="#0A42E4" />
                         </LinearLayout>
 
                         <!-- Dia 4 -->
@@ -313,6 +337,7 @@
 
             <!-- Item 2 -->
             <LinearLayout
+                android:id="@+id/btn_criarFicha"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -321,12 +346,14 @@
                 android:focusable="true"
                 android:gravity="center"
                 android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:layout_marginBottom="4dp"
                     android:src="@drawable/editar"
                     app:tint="#888888" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
