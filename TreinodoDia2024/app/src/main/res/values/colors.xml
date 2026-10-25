@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="treino_anil">#004AF7</color>
+    <color name="treino_marinho">#132190</color>
+    <color name="treino_gelo">#E4F2FE</color>
+    <color name="treino_azul_claro">#87B7FE</color>
+    <color name="treino_texto">#132F78</color>
+    <color name="treino_divisor">#D5E8FF</color>
+    <color name="treino_branco">#FFFFFF</color>
+</resources>
