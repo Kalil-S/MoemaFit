@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
@@ -13,6 +14,7 @@ class PerfilAlunoActivity : AppCompatActivity() {
 
     private lateinit var cardFicha: MaterialCardView
     private lateinit var cardEmptyState: MaterialCardView
+    private lateinit var txtDataAlteracao: TextView
 
     private val fichaLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
@@ -40,6 +42,7 @@ class PerfilAlunoActivity : AppCompatActivity() {
 
         cardFicha = findViewById(R.id.card_ficha_carolina)
         cardEmptyState = findViewById(R.id.card_empty_state_fichas)
+        txtDataAlteracao = findViewById(R.id.txt_data_alteracao)
 
         findViewById<ImageButton>(R.id.btn_voltar_detalhes_coletiva).setOnClickListener {
             finish()
@@ -54,6 +57,15 @@ class PerfilAlunoActivity : AppCompatActivity() {
         }
     }
 
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        val data = intent.getStringExtra("data_alteracao")
+        if (data != null) {
+            txtDataAlteracao.text = "Alterada: $data"
+            txtDataAlteracao.visibility = View.VISIBLE
+        }
+    }
+
     private fun mostrarSemFicha() {
         cardFicha.visibility = View.GONE
         cardEmptyState.visibility = View.VISIBLE
@@ -62,5 +74,6 @@ class PerfilAlunoActivity : AppCompatActivity() {
     private fun mostrarComFicha() {
         cardFicha.visibility = View.VISIBLE
         cardEmptyState.visibility = View.GONE
+        txtDataAlteracao.visibility = View.GONE // ficha nova, ainda sem alteração
     }
 }
