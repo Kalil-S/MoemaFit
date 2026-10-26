@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Moema Fit"
+rootProject.name = "Treino Concluido 2024"
 include(":app")
