@@ -159,15 +159,33 @@
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Sala 4" android:textColor="#555555" android:textSize="14sp" android:textStyle="bold" />
                         </LinearLayout>
 
-                        <!-- Vagas -->
+                        <!-- Vagas (Clicável para ver lista de alunos) -->
                         <LinearLayout
+                            android:id="@+id/btnVerParticipantes"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
                             android:gravity="center"
-                            android:orientation="vertical">
-                            <ImageView android:layout_width="28dp" android:layout_height="28dp" android:src="@drawable/ic_group" app:tint="#0A42E4" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="16/25" android:textColor="#555555" android:textSize="14sp" android:textStyle="bold" />
+                            android:orientation="vertical"
+                            android:paddingVertical="8dp">
+
+                            <ImageView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:src="@drawable/ic_group"
+                                app:tint="#0A42E4" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="4/10"
+                                android:textColor="#555555"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
 

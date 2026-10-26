@@ -21,7 +21,7 @@ class MenuAlunoActivity : AppCompatActivity() {
         findViewById<View>(R.id.itemFeedback).setOnClickListener { avisoEmBreve() }
 
         findViewById<View>(R.id.itemAulaColetiva).setOnClickListener {
-            startActivity(Intent(this, DetalhesAulaActivity::class.java))
+            startActivity(Intent(this, DetalhesAulaColetiva::class.java))
         }
         findViewById<View>(R.id.itemSair).setOnClickListener { mostrarPopupSair() }
     }

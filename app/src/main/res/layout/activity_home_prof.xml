@@ -312,6 +312,7 @@
 
             <!-- Item 1 -->
             <LinearLayout
+                android:id="@+id/btn_nav_aula_coletiva"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -363,8 +364,8 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <!-- NOVO ITEM 4: PRÉ-CADASTRO (Cadastrar) -->
             <LinearLayout
+                android:id="@+id/btn_cadastrar"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -390,6 +391,7 @@
 
             <!-- Item 3 -->
             <LinearLayout
+                android:id="@+id/btn_nav_buscar"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

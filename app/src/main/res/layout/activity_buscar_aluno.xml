@@ -145,48 +145,6 @@
             <!-- PLACEHOLDER DE RESULTADOS      -->
             <!-- ============================== -->
             <!-- Essa área aparece vazia e pode ser substituída pela lista (RecyclerView) de alunos encontrados depois -->
-            <LinearLayout
-                android:id="@+id/layout_empty_state"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <!-- Fundo circular para o ícone -->
-                <LinearLayout
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:background="@drawable/shape_circulo_branco"
-                    android:backgroundTint="#E4EEF9"
-                    android:gravity="center">
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@android:drawable/ic_menu_info_details"
-                        app:tint="#88A3F8" />
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Os resultados aparecerão aqui"
-                    android:textColor="#A0A0A0"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="Utilize a barra de pesquisa acima para encontrar um aluno."
-                    android:textAlignment="center"
-                    android:textColor="#B0C4DE"
-                    android:textSize="14sp" />
-
-            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>

@@ -27,10 +27,21 @@
         <activity android:name=".ConfiguracoesActivity" android:exported="true" />
         <activity android:name=".RedefinirSenhaActivity" android:exported="true" />
         <activity android:name=".MenuAlunoActivity" android:exported="true" />
-        <activity android:name=".DetalhesAulaActivity" android:exported="true" />
+        <activity android:name=".DetalhesAulaColetiva" android:exported="true" />
         <activity android:name=".HomeProf" android:exported="true" />
         <activity android:name=".PerfilProfessorActivity" android:exported="true" />
         <activity android:name=".CriarFicha" android:exported="true" />
+        <activity android:name=".DetalhesFichaHistoricoActivity" android:exported="true" />
+        <activity android:name=".HistoricoFichasProfessorActivity" android:exported="true" />
+        <activity android:name=".ListaParticipantesAulaColetiva" android:exported="true" />
+        <activity android:name=".PreCadastroAluno" android:exported="true" />
+        <activity android:name=".CriarAulaColetivaActivity" android:exported="true" />
+        <activity android:name=".DetalhesFeedbackActivity" android:exported="true" />
+        <activity android:name=".ListaFeedbacksActivity" android:exported="true" />
+        <activity android:name=".BuscarAlunoActivity" android:exported="true" />
+        <activity android:name=".PerfilAlunoActivity" android:exported="true" />
+        <activity android:name=".FichaAlunoActivity" android:exported="true" />
+        <activity android:name=".EditarFichaActivity" android:exported="true" />
 
     </application>
 

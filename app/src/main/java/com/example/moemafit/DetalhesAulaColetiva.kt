@@ -1,13 +1,15 @@
 package com.example.moemafit
 
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 
-class DetalhesAulaActivity : AppCompatActivity() {
+class DetalhesAulaColetiva : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detalhes_coletiva_prof)
@@ -20,6 +22,11 @@ class DetalhesAulaActivity : AppCompatActivity() {
         val btnCancelarAula = findViewById<Button>(R.id.btnCancelarAula)
         btnCancelarAula.setOnClickListener {
             abrirDialogCancelamento()
+        }
+        val btnParticipantes = findViewById<LinearLayout>(R.id.btnVerParticipantes)
+        btnParticipantes.setOnClickListener {
+            val intent = Intent(this, ListaParticipantesAulaColetiva::class.java)
+            startActivity(intent)
         }
     }
 

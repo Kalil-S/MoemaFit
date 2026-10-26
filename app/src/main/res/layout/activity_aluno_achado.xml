@@ -279,7 +279,65 @@
                         app:tint="#B0C4DE" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
+            <!-- EMPTY STATE (NENHUMA FICHA) -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_empty_state_fichas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:cardBackgroundColor="#F9FAFC"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeColor="#E2E8F0"
+                app:strokeWidth="1dp">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="32dp"
+                    android:paddingTop="32dp"
+                    android:paddingBottom="24dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@android:drawable/ic_menu_agenda"
+                        app:tint="#B0C4DE" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Nenhuma ficha encontrada"
+                        android:textColor="#555555"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Este aluno não possui fichas ativas no momento."
+                        android:textAlignment="center"
+                        android:textColor="#A0A0A0"
+                        android:textSize="14sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_criar_ficha_empty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="24dp"
+                        android:backgroundTint="#0A42E4"
+                        android:text="Criar Nova Ficha"
+                        android:textColor="#FFFFFF"
+                        app:cornerRadius="25dp"
+                        app:icon="@android:drawable/ic_input_add"
+                        app:iconTint="#FFFFFF" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

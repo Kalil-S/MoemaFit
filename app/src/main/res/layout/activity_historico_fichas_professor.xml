@@ -2,13 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Car"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F4F8FB">
 
-    <!-- ============================== -->
-    <!-- TOOLBAR SUPERIOR               -->
-    <!-- ============================== -->
+    <!-- TOOLBAR SUPERIOR -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/toolbarLayout"
         android:layout_width="match_parent"
@@ -41,11 +40,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- ============================== -->
-    <!-- LISTA DE FICHAS                -->
-    <!-- ============================== -->
+    <!-- LISTA DE FICHAS -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -53,9 +51,10 @@
         android:paddingBottom="24dp"
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbarLayout">
+        app:layout_constraintTop_toBottomOf="@id/toolbarLayout">
 
         <LinearLayout
+            android:id="@+id/lista_fichas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -69,10 +68,9 @@
                 android:textColor="#888888"
                 android:textSize="14sp" />
 
-            <!-- ============================== -->
-            <!-- ITEM 1: Ficha da Alice (INATIVA) -->
-            <!-- ============================== -->
+            <!-- ITEM 1: FICHA DA ALICE (INATIVA) -->
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_ficha_alice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
@@ -85,38 +83,43 @@
                 app:strokeWidth="0dp">
 
                 <LinearLayout
+                    android:id="@+id/cardAlice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:padding="16dp"
-                    android:gravity="center_vertical">
+                    android:padding="16dp">
 
+                    <!-- ÍCONE DA FICHA -->
                     <LinearLayout
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:background="@drawable/shape_circulo_branco"
                         android:backgroundTint="#F0F4FF"
                         android:gravity="center">
+
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:src="@android:drawable/ic_menu_agenda"
                             app:tint="#0A42E4" />
+
                     </LinearLayout>
 
+                    <!-- INFORMAÇÕES DA ALICE -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_marginStart="16dp"
+                        android:layout_weight="1"
                         android:orientation="vertical">
 
                         <!-- NOME E STATUS -->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical">
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
 
                             <TextView
                                 android:layout_width="0dp"
@@ -127,8 +130,9 @@
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
 
-                            <!-- BADGE DE STATUS: INATIVA -->
+                            <!-- BADGE DE STATUS -->
                             <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/badge_status_alice"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 app:cardBackgroundColor="#F1F3F4"
@@ -137,6 +141,7 @@
                                 app:strokeWidth="0dp">
 
                                 <TextView
+                                    android:id="@+id/txt_status_alice"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:paddingHorizontal="8dp"
@@ -145,8 +150,11 @@
                                     android:textColor="#555555"
                                     android:textSize="10sp"
                                     android:textStyle="bold" />
+
                             </com.google.android.material.card.MaterialCardView>
+
                         </LinearLayout>
+                        <!-- FIM DO NOME E STATUS -->
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -163,6 +171,7 @@
                             android:textColor="#888888"
                             android:textSize="13sp" />
 
+                        <!-- DATAS -->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -178,20 +187,21 @@
                                 android:textSize="12sp" />
 
                             <TextView
+                                android:id="@+id/txt_data_alteracao_alice"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Alterada: 16/04/2026"
                                 android:textColor="#0A42E4"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
+
                         </LinearLayout>
+
                     </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- ============================== -->
-            <!-- ITEM 2: Ficha da Carol (ATIVA) -->
-            <!-- ============================== -->
+            <!-- ITEM 2: FICHA DA CAROL (ATIVA) -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -207,9 +217,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:padding="16dp"
-                    android:gravity="center_vertical">
+                    android:padding="16dp">
 
                     <LinearLayout
                         android:layout_width="50dp"
@@ -217,26 +227,27 @@
                         android:background="@drawable/shape_circulo_branco"
                         android:backgroundTint="#F0F4FF"
                         android:gravity="center">
+
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:src="@android:drawable/ic_menu_agenda"
                             app:tint="#0A42E4" />
+
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_marginStart="16dp"
+                        android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <!-- NOME E STATUS -->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical">
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
 
                             <TextView
                                 android:layout_width="0dp"
@@ -247,7 +258,6 @@
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
 
-                            <!-- BADGE DE STATUS: ATIVA -->
                             <com.google.android.material.card.MaterialCardView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -265,6 +275,7 @@
                                     android:textColor="#1E8E3E"
                                     android:textSize="10sp"
                                     android:textStyle="bold" />
+
                             </com.google.android.material.card.MaterialCardView>
                         </LinearLayout>
 
@@ -304,14 +315,13 @@
                                 android:textColor="#0A42E4"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
+
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- ============================== -->
-            <!-- ITEM 3: Ficha do Gustavo (ATIVA) -->
-            <!-- ============================== -->
+            <!-- ITEM 3: FICHA DO GUSTAVO (ATIVA) -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -327,9 +337,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:padding="16dp"
-                    android:gravity="center_vertical">
+                    android:padding="16dp">
 
                     <LinearLayout
                         android:layout_width="50dp"
@@ -337,26 +347,27 @@
                         android:background="@drawable/shape_circulo_branco"
                         android:backgroundTint="#F0F4FF"
                         android:gravity="center">
+
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:src="@android:drawable/ic_menu_agenda"
                             app:tint="#0A42E4" />
+
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_marginStart="16dp"
+                        android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <!-- NOME E STATUS -->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical">
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
 
                             <TextView
                                 android:layout_width="0dp"
@@ -367,7 +378,6 @@
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
 
-                            <!-- BADGE DE STATUS: ATIVA -->
                             <com.google.android.material.card.MaterialCardView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -385,6 +395,7 @@
                                     android:textColor="#1E8E3E"
                                     android:textSize="10sp"
                                     android:textStyle="bold" />
+
                             </com.google.android.material.card.MaterialCardView>
                         </LinearLayout>
 
@@ -424,6 +435,7 @@
                                 android:textColor="#1E8E3E"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
+
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>

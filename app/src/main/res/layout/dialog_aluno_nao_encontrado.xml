@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ConstraintLayout pai para escurecer o fundo e centralizar o cartão -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- CARTÃO BRANCO CENTRALIZADO -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardDialogAlunoNaoEncontrado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:strokeWidth="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- ÍCONE CENTRALIZADO (Busca sem resultados) -->
+            <LinearLayout
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/shape_circulo_branco"
+                android:backgroundTint="#F4F8FB"
+                android:gravity="center">
+
+                <!-- Usa o ic_search nativo do Android pintado no tom de azul ou cinza escuro -->
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@android:drawable/ic_menu_search"
+                    app:tint="#0A42E4" />
+            </LinearLayout>
+
+            <!-- TÍTULO -->
+            <TextView
+                android:id="@+id/txtTituloNaoEncontrado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="Aluno não encontrado"
+                android:textColor="#333333"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- MENSAGEM EXPLICATIVA -->
+            <TextView
+                android:id="@+id/txtMensagemNaoEncontrado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:lineSpacingExtra="3dp"
+                android:text="Nenhum aluno foi localizado com os dados informados. Verifique a grafia e tente novamente."
+                android:textColor="#555555"
+                android:textSize="14sp" />
+
+            <!-- BOTÃO ENTENDIDO / TENTAR NOVAMENTE -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnOkNaoEncontrado"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="#0A42E4"
+                android:text="Tentar Novamente"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                app:cornerRadius="12dp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
