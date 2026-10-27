@@ -130,6 +130,7 @@
 
                     <!-- Data (Com ícone clicável no final) -->
                     <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layoutData"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

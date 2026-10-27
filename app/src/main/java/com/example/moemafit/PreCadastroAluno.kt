@@ -19,6 +19,11 @@ class PreCadastroAluno : AppCompatActivity() {
             abrirDialogConfirmarCadastro()
         }
 
+        val btnCancelarTela = findViewById<Button>(R.id.btn_cancelar)
+        btnCancelarTela?.setOnClickListener {
+            finish()
+        }
+
         val btnVoltar = findViewById<ImageView>(R.id.btn_voltar_detalhes_coletiva)
         btnVoltar?.setOnClickListener {
             finish()
@@ -46,7 +51,6 @@ class PreCadastroAluno : AppCompatActivity() {
 
         btnCancelar?.setOnClickListener {
             dialog.dismiss()
-            finish()
         }
 
         dialog.show()
