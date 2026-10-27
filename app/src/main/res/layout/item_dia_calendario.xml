@@ -3,40 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/layoutContainerDia"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:gravity="center_vertical"
-    android:paddingVertical="12dp"
-    android:paddingHorizontal="16dp"
-    android:layout_marginBottom="6dp">
-
-    <TextView
-        android:id="@+id/txtDiaSemana"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:text="Seg"
-        android:textColor="#B0C4DE"
-        android:textSize="14sp"
-        android:textStyle="bold" />
+    android:layout_height="44dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="2dp">
 
     <TextView
         android:id="@+id/txtNumeroDia"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="01 de Outubro"
+        android:text="18"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textStyle="bold"
-        android:layout_marginStart="8dp" />
+        android:gravity="center"
+        android:singleLine="true" />
 
     <!-- Ícone do Halter (Aula Coletiva) -->
     <ImageView
         android:id="@+id/imgHalterAula"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
         android:src="@drawable/halter"
         app:tint="#FFFFFF"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:layout_marginTop="1dp" />
 
 </LinearLayout>
