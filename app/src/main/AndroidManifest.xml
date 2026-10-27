@@ -43,6 +43,11 @@
         <activity android:name=".FichaAlunoActivity" android:exported="true" />
         <activity android:name=".EditarFichaActivity" android:exported="true" />
 
+        <activity
+            android:name=".CalendarioProfessor"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
     </application>
 
 </manifest>
