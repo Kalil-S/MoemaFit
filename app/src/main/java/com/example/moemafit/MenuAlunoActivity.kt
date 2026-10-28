@@ -16,13 +16,27 @@ class MenuAlunoActivity : AppCompatActivity() {
 
         findViewById<View>(R.id.btnVoltar).setOnClickListener { finish() }
 
-        findViewById<View>(R.id.itemPerfil).setOnClickListener { avisoEmBreve() }
-        findViewById<View>(R.id.itemConfig).setOnClickListener { avisoEmBreve() }
+        // Redireciona para a tela de Perfil do Aluno
+        findViewById<View>(R.id.itemPerfil).setOnClickListener {
+            val intent = Intent(this, PerfilAlunoActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Redireciona para a tela de Configurações do Aluno
+        findViewById<View>(R.id.itemConfig).setOnClickListener {
+            val intent = Intent(this, ConfiguracoesAlunoActivity::class.java)
+            startActivity(intent)
+        }
+
         findViewById<View>(R.id.itemFeedback).setOnClickListener { avisoEmBreve() }
 
+        // Redireciona para o Calendário do Aluno (Aulas Coletivas)
         findViewById<View>(R.id.itemAulaColetiva).setOnClickListener {
-            startActivity(Intent(this, ParticiparAulaColetivaActivity::class.java))
+            val intent = Intent(this, CalendarioAlunoActivity::class.java)
+            startActivity(intent)
         }
+
+        // Botão Sair - Abre o pop-up customizado do aluno
         findViewById<View>(R.id.itemSair).setOnClickListener { mostrarPopupSair() }
     }
 
@@ -33,18 +47,26 @@ class MenuAlunoActivity : AppCompatActivity() {
     private fun mostrarPopupSair() {
         val dialog = Dialog(this)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(R.layout.dialog_confirmar_sair)
+        // Aponta para o XML exato do pop-up de sair do aluno
+        dialog.setContentView(R.layout.dialog_confirmar_sair_aluno)
 
-        dialog.findViewById<View>(R.id.btnSimSairConta).setOnClickListener {
+        // Botão "Sim" -> Limpa o histórico, fecha as telas e volta para o MainActivity (Login)
+        dialog.findViewById<View>(R.id.btnSimSairConta)?.setOnClickListener {
             dialog.dismiss()
-            finishAffinity()
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
         }
-        dialog.findViewById<View>(R.id.btnNaoSairConta).setOnClickListener { dialog.dismiss() }
+
+        // Botão "Não" -> Apenas fecha o pop-up e permanece no menu do aluno
+        dialog.findViewById<View>(R.id.btnNaoSairConta)?.setOnClickListener {
+            dialog.dismiss()
+        }
 
         dialog.show()
         dialog.window?.apply {
             setBackgroundDrawableResource(android.R.color.transparent)
-            // Corrigido aqui com o '*' e sem o traço lateral:
             setLayout((resources.displayMetrics.widthPixels * 0.85).toInt(), ViewGroup.LayoutParams.WRAP_CONTENT)
         }
     }

@@ -35,41 +35,43 @@
             android:name=".HomeAlunoActivity"
             android:exported="false" />
 
-        <!-- Demais telas do projeto -->
-        <activity android:name=".MenuActivity" android:exported="true" />
-        <activity android:name=".ConfiguracoesActivity" android:exported="true" />
-        <activity android:name=".RedefinirSenhaActivity" android:exported="true" />
-        <activity android:name=".MenuAlunoActivity" android:exported="true" />
-        <activity android:name=".DetalhesAulaColetiva" android:exported="true" />
-        <activity android:name=".HomeProf" android:exported="true" />
-        <activity android:name=".PerfilProfessorActivity" android:exported="true" />
-        <activity android:name=".CriarFicha" android:exported="true" />
-        <activity android:name=".DetalhesFichaHistoricoActivity" android:exported="true" />
-        <activity android:name=".HistoricoFichasProfessorActivity" android:exported="true" />
-        <activity android:name=".ListaParticipantesAulaColetiva" android:exported="true" />
-        <activity android:name=".PreCadastroAluno" android:exported="true" />
-        <activity android:name=".CriarAulaColetivaActivity" android:exported="true" />
-        <activity android:name=".DetalhesFeedbackActivity" android:exported="true" />
-        <activity android:name=".ListaFeedbacksActivity" android:exported="true" />
-        <activity android:name=".BuscarAlunoActivity" android:exported="true" />
-        <activity android:name=".PerfilAlunoActivity" android:exported="true" />
-        <activity android:name=".FichaAlunoActivity" android:exported="true" />
-        <activity android:name=".EditarFichaActivity" android:exported="true" />
+        <!-- Demais telas do projeto (todas com exported="false" por segurança) -->
+        <activity android:name=".MenuActivity" android:exported="false" />
+        <activity android:name=".ConfiguracoesActivity" android:exported="false" />
+        <activity android:name=".RedefinirSenhaActivity" android:exported="false" />
+        <activity android:name=".MenuAlunoActivity" android:exported="false" />
+        <activity android:name=".DetalhesAulaColetiva" android:exported="false" />
+        <activity android:name=".HomeProf" android:exported="false" />
+        <activity android:name=".PerfilProfessorActivity" android:exported="false" />
+        <activity android:name=".CriarFicha" android:exported="false" />
+        <activity android:name=".DetalhesFichaHistoricoActivity" android:exported="false" />
+        <activity android:name=".HistoricoFichasProfessorActivity" android:exported="false" />
+        <activity android:name=".ListaParticipantesAulaColetiva" android:exported="false" />
+        <activity android:name=".PreCadastroAluno" android:exported="false" />
+        <activity android:name=".CriarAulaColetivaActivity" android:exported="false" />
+        <activity android:name=".DetalhesFeedbackActivity" android:exported="false" />
+        <activity android:name=".ListaFeedbacksActivity" android:exported="false" />
+        <activity android:name=".BuscarAlunoActivity" android:exported="false" />
+        <activity android:name=".PerfilAlunoActivity" android:exported="false" />
+        <activity android:name=".FichaAlunoActivity" android:exported="false" />
+        <activity android:name=".EditarFichaActivity" android:exported="false" />
 
         <activity
             android:name=".CalendarioProfessor"
-            android:exported="true"
+            android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
         <activity
             android:name=".CalendarioAlunoActivity"
-            android:exported="true" />
+            android:exported="false" />
 
         <activity android:name=".PontosAlunoActivity" android:exported="false" />
 
         <activity
             android:name=".ParticiparAulaColetivaActivity"
             android:exported="false" />
+
+        <activity android:name=".ConfiguracoesAlunoActivity" android:exported="false" />
 
     </application>
 

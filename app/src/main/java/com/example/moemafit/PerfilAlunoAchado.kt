@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 
-class PerfilAlunoActivity : AppCompatActivity() {
+class PerfilAlunoAchado : AppCompatActivity() {
 
     private lateinit var cardFicha: MaterialCardView
     private lateinit var cardEmptyState: MaterialCardView
