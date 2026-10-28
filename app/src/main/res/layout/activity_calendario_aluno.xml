@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4F8FB"
+    android:gravity="center_horizontal"
+    android:paddingTop="16dp">
+
+    <!-- ============================== -->
+    <!-- TOPO: HEADER UNIFOR            -->
+    <!-- ============================== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingBottom="12dp">
+
+        <ImageView
+            android:id="@+id/imgLogoUnifor"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:src="@drawable/icone_unifor"
+            android:scaleType="fitCenter"
+            android:contentDescription="Logo Unifor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unifor"
+            android:textColor="#0A42E4"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/imgMenu"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_sort_by_size"
+            app:tint="#0A42E4"
+            android:contentDescription="Menu" />
+    </LinearLayout>
+
+    <!-- ============================== -->
+    <!-- CONTEÚDO CENTRAL: CARTÃO AZUL  -->
+    <!-- ============================== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="12dp"
+        android:gravity="center">
+
+        <!-- Indicador de Fogo / Streak no Topo do Cartão -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/fogo"
+                app:tint="#000000"
+                android:contentDescription="Ícone Fogo" />
+
+            <TextView
+                android:id="@+id/txtStreak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Streak: 0"
+                android:textColor="#333333"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_card"
+            android:backgroundTint="#0A42E4"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:elevation="4dp">
+
+            <!-- Navegação Mês / Ano -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+
+                <ImageButton
+                    android:id="@+id/btnMesAnterior"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_media_previous"
+                    app:tint="#FFFFFF"
+                    android:contentDescription="Mês Anterior" />
+
+                <TextView
+                    android:id="@+id/txtMesAno"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Setembro 2026"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+
+                <ImageButton
+                    android:id="@+id/btnMesProximo"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_media_next"
+                    app:tint="#FFFFFF"
+                    android:contentDescription="Próximo Mês" />
+            </LinearLayout>
+
+            <!-- Dias da Semana -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="7"
+                android:layout_marginBottom="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Dom" android:textColor="#B0C4DE" android:textSize="13sp" android:textStyle="bold" android:gravity="center" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Seg" android:textColor="#B0C4DE" android:textSize="13sp" android:textStyle="bold" android:gravity="center" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Ter" android:textColor="#B0C4DE" android:textSize="13sp" android:textStyle="bold" android:gravity="center" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Qua" android:textColor="#B0C4DE" android:textSize="13sp" android:textStyle="bold" android:gravity="center" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Qui" android:textColor="#B0C4DE" android:textSize="13sp" android:textStyle="bold" android:gravity="center" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Sex" android:textColor="#B0C4DE" android:textSize="13sp" android:textStyle="bold" android:gravity="center" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Sáb" android:textColor="#B0C4DE" android:textSize="13sp" android:textStyle="bold" android:gravity="center" />
+            </LinearLayout>
+
+            <!-- Grid de Dias -->
+            <GridView
+                android:id="@+id/gridViewCalendario"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:numColumns="7"
+                android:stretchMode="columnWidth"
+                android:gravity="center"
+                android:verticalSpacing="6dp"
+                android:horizontalSpacing="4dp"
+                android:scrollbars="none" />
+
+            <!-- Botão de Pontos na base do Cartão Azul -->
+            <Button
+                android:id="@+id/btnPontos"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#0033CC"
+                android:text="Pontos"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:cornerRadius="12dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ============================== -->
+    <!-- MENU INFERIOR (3 Opções Aluno) -->
+    <!-- ============================== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:elevation="8dp"
+        android:paddingHorizontal="12dp">
+
+        <!-- Item 1: Aula Coletiva -->
+        <LinearLayout
+            android:id="@+id/menuAulaColetiva"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/haltere"
+                app:tint="#0A42E4" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aula coletiva"
+                android:textColor="#0A42E4"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:layout_marginTop="3dp" />
+        </LinearLayout>
+
+        <!-- Item 2: Minha Ficha -->
+        <LinearLayout
+            android:id="@+id/btn_minha_ficha"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/editar"
+                app:tint="#555555" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Minha ficha"
+                android:textColor="#555555"
+                android:textSize="11sp"
+                android:layout_marginTop="3dp" />
+        </LinearLayout>
+
+        <!-- Item 3: Opções -->
+        <LinearLayout
+            android:id="@+id/menuOpcoes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_settings"
+                app:tint="#555555" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opções"
+                android:textColor="#555555"
+                android:textSize="11sp"
+                android:layout_marginTop="3dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

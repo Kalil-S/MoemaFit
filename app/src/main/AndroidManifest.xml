@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,16 +14,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MoemaFit"
         tools:targetApi="31">
+
+        <!-- Tela Splash (Abre primeiro) -->
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <!-- MainActivity (Login) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- Nova Tela Home Aluno -->
+        <activity
+            android:name=".HomeAlunoActivity"
+            android:exported="false" />
+
+        <!-- Demais telas do projeto -->
         <activity android:name=".MenuActivity" android:exported="true" />
         <activity android:name=".ConfiguracoesActivity" android:exported="true" />
         <activity android:name=".RedefinirSenhaActivity" android:exported="true" />
@@ -47,6 +60,10 @@
             android:name=".CalendarioProfessor"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity
+            android:name=".CalendarioAlunoActivity"
+            android:exported="true" />
 
     </application>
 
