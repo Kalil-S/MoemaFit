@@ -21,7 +21,7 @@ class MenuAlunoActivity : AppCompatActivity() {
         findViewById<View>(R.id.itemFeedback).setOnClickListener { avisoEmBreve() }
 
         findViewById<View>(R.id.itemAulaColetiva).setOnClickListener {
-            startActivity(Intent(this, DetalhesAulaColetiva::class.java))
+            startActivity(Intent(this, ParticiparAulaColetivaActivity::class.java))
         }
         findViewById<View>(R.id.itemSair).setOnClickListener { mostrarPopupSair() }
     }
@@ -44,6 +44,7 @@ class MenuAlunoActivity : AppCompatActivity() {
         dialog.show()
         dialog.window?.apply {
             setBackgroundDrawableResource(android.R.color.transparent)
+            // Corrigido aqui com o '*' e sem o traço lateral:
             setLayout((resources.displayMetrics.widthPixels * 0.85).toInt(), ViewGroup.LayoutParams.WRAP_CONTENT)
         }
     }

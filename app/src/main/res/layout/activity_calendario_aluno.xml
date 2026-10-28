@@ -63,36 +63,9 @@
         android:paddingBottom="12dp"
         android:gravity="center">
 
-        <!-- Indicador de Fogo / Streak no Topo do Cartão -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_marginBottom="8dp">
-
-            <ImageView
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:src="@drawable/fogo"
-                app:tint="#000000"
-                android:contentDescription="Ícone Fogo" />
-
-            <TextView
-                android:id="@+id/txtStreak"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Streak: 0"
-                android:textColor="#333333"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                android:layout_marginTop="2dp" />
-        </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="match_parent"
             android:background="@drawable/bg_card"
             android:backgroundTint="#0A42E4"
             android:orientation="vertical"
@@ -121,7 +94,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Setembro 2026"
+                    android:text="Outubro 2026"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -162,7 +135,7 @@
                 android:numColumns="7"
                 android:stretchMode="columnWidth"
                 android:gravity="center"
-                android:verticalSpacing="6dp"
+                android:verticalSpacing="4dp"
                 android:horizontalSpacing="4dp"
                 android:scrollbars="none" />
 
@@ -182,7 +155,7 @@
     </LinearLayout>
 
     <!-- ============================== -->
-    <!-- MENU INFERIOR (3 Opções Aluno) -->
+    <!-- MENU INFERIOR COM IDs          -->
     <!-- ============================== -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -193,7 +166,6 @@
         android:elevation="8dp"
         android:paddingHorizontal="12dp">
 
-        <!-- Item 1: Aula Coletiva -->
         <LinearLayout
             android:id="@+id/menuAulaColetiva"
             android:layout_width="0dp"
@@ -204,7 +176,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/haltere"
+                android:src="@drawable/ic_group"
                 app:tint="#0A42E4" />
             <TextView
                 android:layout_width="wrap_content"
@@ -216,9 +188,8 @@
                 android:layout_marginTop="3dp" />
         </LinearLayout>
 
-        <!-- Item 2: Minha Ficha -->
         <LinearLayout
-            android:id="@+id/btn_minha_ficha"
+            android:id="@+id/menuCriarFicha"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -232,13 +203,33 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Minha ficha"
+                android:text="Criar ficha"
                 android:textColor="#555555"
                 android:textSize="11sp"
                 android:layout_marginTop="3dp" />
         </LinearLayout>
 
-        <!-- Item 3: Opções -->
+        <LinearLayout
+            android:id="@+id/menuCadastrar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_person"
+                app:tint="#555555" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cadastrar"
+                android:textColor="#555555"
+                android:textSize="11sp"
+                android:layout_marginTop="3dp" />
+        </LinearLayout>
+
         <LinearLayout
             android:id="@+id/menuOpcoes"
             android:layout_width="0dp"
