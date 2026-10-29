@@ -55,6 +55,7 @@
         <activity android:name=".PerfilAlunoActivity" android:exported="false" />
         <activity android:name=".FichaAlunoActivity" android:exported="false" />
         <activity android:name=".EditarFichaActivity" android:exported="false" />
+        <activity android:name=".PrimeiroLoginActivity" android:exported="false" />
 
         <activity
             android:name=".CalendarioProfessor"
