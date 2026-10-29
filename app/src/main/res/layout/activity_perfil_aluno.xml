@@ -207,8 +207,12 @@
 
             <!-- CARD DA FICHA ATIVA -->
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFichaPerfil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
                 app:cardBackgroundColor="#FFFFFF"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="2dp"
