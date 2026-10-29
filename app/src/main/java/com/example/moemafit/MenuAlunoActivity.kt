@@ -28,7 +28,11 @@ class MenuAlunoActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        findViewById<View>(R.id.itemFeedback).setOnClickListener { avisoEmBreve() }
+        // Redireciona para a tela de Feedback do Aluno
+        findViewById<View>(R.id.itemFeedback).setOnClickListener {
+            val intent = Intent(this, FeedbackAlunoActivity::class.java)
+            startActivity(intent)
+        }
 
         // Redireciona para o Calendário do Aluno (Aulas Coletivas)
         findViewById<View>(R.id.itemAulaColetiva).setOnClickListener {
@@ -38,10 +42,6 @@ class MenuAlunoActivity : AppCompatActivity() {
 
         // Botão Sair - Abre o pop-up customizado do aluno
         findViewById<View>(R.id.itemSair).setOnClickListener { mostrarPopupSair() }
-    }
-
-    private fun avisoEmBreve() {
-        Toast.makeText(this, "Tela ainda não implementada", Toast.LENGTH_SHORT).show()
     }
 
     private fun mostrarPopupSair() {

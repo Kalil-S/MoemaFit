@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0D1B68">
+
+    <!-- Cabeçalho Superior com Seta de Voltar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:background="#E8F1F5">
+
+        <ImageButton
+            android:id="@+id/btnVoltarFicha"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Voltar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minha Ficha"
+            android:textColor="#0D1B68"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+    <!-- Conteúdo Scrollável com os Treinos A, B e C -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- ============================== -->
+            <!-- TREINO A                       -->
+            <!-- ============================== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card_arredondado"
+                android:backgroundTint="#1B2D82"
+                android:padding="16dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Treino A"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:paddingBottom="12dp" />
+
+                <!-- Cabeçalho da Tabela -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.2" android:text="Exercício" android:textColor="#A0A0A0" android:textSize="12sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="Séries" android:textColor="#A0A0A0" android:textSize="12sp" android:textStyle="bold" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="Rep." android:textColor="#A0A0A0" android:textSize="12sp" android:textStyle="bold" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="Descanso" android:textColor="#A0A0A0" android:textSize="12sp" android:textStyle="bold" android:gravity="end"/>
+                </LinearLayout>
+
+                <!-- Itens Treino A -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="6dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.2" android:text="Cadeira Extensora" android:textColor="#FFFFFF" android:textSize="14sp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="3" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="12" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="30 Seg" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="end"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="6dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.2" android:text="Cadeira Flexora" android:textColor="#FFFFFF" android:textSize="14sp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="3" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="12" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="30 Seg" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="end"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="6dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.2" android:text="Cadeira Abdutora" android:textColor="#FFFFFF" android:textSize="14sp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="3" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="12" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="30 Seg" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="end"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="6dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.2" android:text="Puxador Triangular" android:textColor="#FFFFFF" android:textSize="14sp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="3" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="12" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="30 Seg" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="end"/>
+                </LinearLayout>
+
+                <!-- Botão Iniciar Treino A -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnIniciarTreinoA"
+                    android:layout_width="140dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:text="Iniciar"
+                    android:textColor="#0D1B68"
+                    android:textSize="14sp"
+                    android:backgroundTint="#E8F1F5"
+                    style="?attr/materialButtonOutlinedStyle" />
+            </LinearLayout>
+
+
+            <!-- ============================== -->
+            <!-- TREINO B                       -->
+            <!-- ============================== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card_arredondado"
+                android:backgroundTint="#1B2D82"
+                android:padding="16dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Treino B"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:paddingBottom="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.2" android:text="Exercício" android:textColor="#A0A0A0" android:textSize="12sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="Séries" android:textColor="#A0A0A0" android:textSize="12sp" android:textStyle="bold" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="Rep." android:textColor="#A0A0A0" android:textSize="12sp" android:textStyle="bold" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="Descanso" android:textColor="#A0A0A0" android:textSize="12sp" android:textStyle="bold" android:gravity="end"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="6dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.2" android:text="Supino Reto" android:textColor="#FFFFFF" android:textSize="14sp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="4" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="10" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="45 Seg" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="end"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="6dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.2" android:text="Puxada Alta" android:textColor="#FFFFFF" android:textSize="14sp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="3" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="12" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="30 Seg" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="end"/>
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnIniciarTreinoB"
+                    android:layout_width="140dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:text="Iniciar"
+                    android:textColor="#0D1B68"
+                    android:textSize="14sp"
+                    android:backgroundTint="#E8F1F5"
+                    style="?attr/materialButtonOutlinedStyle" />
+            </LinearLayout>
+
+
+            <!-- ============================== -->
+            <!-- TREINO C                       -->
+            <!-- ============================== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card_arredondado"
+                android:backgroundTint="#1B2D82"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Treino C"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:paddingBottom="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.2" android:text="Exercício" android:textColor="#A0A0A0" android:textSize="12sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="Séries" android:textColor="#A0A0A0" android:textSize="12sp" android:textStyle="bold" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="Rep." android:textColor="#A0A0A0" android:textSize="12sp" android:textStyle="bold" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="Descanso" android:textColor="#A0A0A0" android:textSize="12sp" android:textStyle="bold" android:gravity="end"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="6dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.2" android:text="Prancha Abdominal" android:textColor="#FFFFFF" android:textSize="14sp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="3" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="1 min" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="30 Seg" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="end"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="6dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.2" android:text="Esteira (Cardio)" android:textColor="#FFFFFF" android:textSize="14sp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="1" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="20 min" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="-" android:textColor="#FFFFFF" android:textSize="14sp" android:gravity="end"/>
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnIniciarTreinoC"
+                    android:layout_width="140dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:text="Iniciar"
+                    android:textColor="#0D1B68"
+                    android:textSize="14sp"
+                    android:backgroundTint="#E8F1F5"
+                    style="?attr/materialButtonOutlinedStyle" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -73,6 +73,20 @@
 
         <activity android:name=".ConfiguracoesAlunoActivity" android:exported="false" />
 
+        <activity android:name=".FeedbackAlunoActivity" android:exported="false" />
+
+        <activity android:name=".RedefinirSenhaAlunoActivity" android:exported="false" />
+
+        <activity android:name=".MinhaFichaAlunoActivity" android:exported="false" />
+
+        <activity
+            android:name=".EmTreinoAlunoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TreinoConcluidoActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

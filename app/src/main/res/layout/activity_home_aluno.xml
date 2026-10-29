@@ -199,7 +199,7 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- CARD DE FEEDBACKS -->
+            <!-- CARD DE TREINO DO DIA (Substituiu os Feedbacks) -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -217,73 +217,182 @@
                     android:orientation="vertical"
                     android:padding="24dp">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Feedbacks"
-                            android:textColor="#0A42E4"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/text_veja_mais"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:clickable="true"
-                            android:focusable="true"
-                            android:text="Veja mais"
-                            android:textColor="#888888"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <!-- ITEM 1 -->
+                    <!-- Cabeçalho do Treino -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
-                        android:orientation="vertical">
-
-                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="16 de Setembro, 2026" android:textColor="#A0A0A0" android:textSize="12sp" />
-                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Esteira danificada" android:textColor="#333333" android:textSize="16sp" android:textStyle="bold" />
-                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Por Mathues Nunes S." android:textColor="#888888" android:textSize="13sp" />
-                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Tentei ligar a esteira mas não funcionou, mas a telinha não mostrava nada." android:textColor="#555555" android:textSize="14sp" />
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
-                            android:background="@drawable/shape_circulo_branco"
-                            android:backgroundTint="#F0F4FF"
-                            android:gravity="center_vertical"
-                            android:paddingHorizontal="12dp"
-                            android:paddingVertical="6dp">
+                            android:layout_weight="1"
+                            android:orientation="vertical">
 
-                            <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@android:drawable/ic_menu_camera" app:tint="#0A42E4" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:text="1 anexo" android:textColor="#0A42E4" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Treino do Dia"
+                                android:textColor="#0A42E4"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="Ficha A - Membros Superiores"
+                                android:textColor="#666666"
+                                android:textSize="14sp" />
                         </LinearLayout>
-                        <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="16dp" android:background="#EAEAEA" />
+
+                        <!-- Ícone de Destaque -->
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/haltere"
+                            app:tint="#0A42E4" />
                     </LinearLayout>
 
-                    <!-- ITEM 2 -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="#EAEAEA" />
+
+                    <!-- Exercício 1 -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_marginBottom="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
 
-                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="02 de Setembro, 2026" android:textColor="#A0A0A0" android:textSize="12sp" />
-                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Teria como atualizar minha ficha?" android:textColor="#333333" android:textSize="16sp" android:textStyle="bold" />
-                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Por Lorem ipsum" android:textColor="#888888" android:textSize="13sp" />
-                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Lorem Ipsum dolor sit amet, consectetur adipiscing elit." android:textColor="#555555" android:textSize="14sp" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Supino Reto com Halteres"
+                                android:textColor="#333333"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="4 séries • 12 repetições"
+                                android:textColor="#888888"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_circulo_branco"
+                            android:backgroundTint="#F0F4FF"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="14kg"
+                            android:textColor="#0A42E4"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
                     </LinearLayout>
+
+                    <!-- Exercício 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Crucifixo Inclinado"
+                                android:textColor="#333333"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="3 séries • 12 repetições"
+                                android:textColor="#888888"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_circulo_branco"
+                            android:backgroundTint="#F0F4FF"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="10kg"
+                            android:textColor="#0A42E4"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Exercício 3 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Desenvolvimento com Halteres"
+                                android:textColor="#333333"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="3 séries • 10 repetições"
+                                android:textColor="#888888"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_circulo_branco"
+                            android:backgroundTint="#F0F4FF"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="12kg"
+                            android:textColor="#0A42E4"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -336,7 +445,7 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <!-- Item 2: Minha Ficha (Substituiu "Criar ficha") -->
+            <!-- Item 2: Minha Ficha -->
             <LinearLayout
                 android:id="@+id/btn_minha_ficha"
                 android:layout_width="0dp"
@@ -364,7 +473,7 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <!-- Item 3: Opções (Substituiu o "Cadastrar" e "Buscar") -->
+            <!-- Item 3: Opções -->
             <LinearLayout
                 android:id="@+id/btn_nav_opcoes"
                 android:layout_width="0dp"

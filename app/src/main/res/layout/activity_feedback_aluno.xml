@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0D1B68">
+
+    <!-- Cabeçalho Superior com Seta de Voltar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:background="#E8F1F5">
+
+        <ImageButton
+            android:id="@+id/btnVoltarFeedback"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Voltar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar feedback"
+            android:textColor="#0D1B68"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+    <!-- Conteúdo Principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feedback:"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Caixa de Texto para o Feedback -->
+        <EditText
+            android:id="@+id/etFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@drawable/bg_card_arredondado"
+            android:backgroundTint="#2D3E8B"
+            android:gravity="top|start"
+            android:padding="16dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#A0A0A0"
+            android:textSize="16sp"
+            android:inputType="textMultiLine"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Estrelas de Avaliação -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="40dp">
+
+            <ImageView
+                android:id="@+id/star1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_star_border"
+                android:layout_marginEnd="8dp" />
+
+            <ImageView
+                android:id="@+id/star2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_star_border"
+                android:layout_marginEnd="8dp" />
+
+            <ImageView
+                android:id="@+id/star3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_star_border"
+                android:layout_marginEnd="8dp" />
+
+            <ImageView
+                android:id="@+id/star4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_star_border"
+                android:layout_marginEnd="8dp" />
+
+            <ImageView
+                android:id="@+id/star5"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_star_border" />
+        </LinearLayout>
+
+        <!-- Botão Enviar -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEnviarFeedback"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:text="Enviar"
+            android:textColor="#0D1B68"
+            android:textSize="16sp"
+            android:backgroundTint="#E8F1F5"
+            style="?attr/materialButtonOutlinedStyle" />
+
+    </LinearLayout>
+</LinearLayout>

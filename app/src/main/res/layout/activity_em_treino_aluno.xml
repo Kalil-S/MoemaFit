@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0D1B68">
+
+    <!-- Cabeçalho Superior com Seta de Voltar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:background="#E8F1F5">
+
+        <ImageButton
+            android:id="@+id/btnVoltarEmTreino"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Voltar" />
+
+        <TextView
+            android:id="@+id/txtTituloTreinoTopo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Em Treino - Treino A"
+            android:textColor="#0D1B68"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+    <!-- Conteúdo Scrollável -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- CARTÃO DE DESTAQUE DO EXERCÍCIO ATUAL (EM CIMA) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card_arredondado"
+                android:backgroundTint="#1B2D82"
+                android:padding="20dp"
+                android:layout_marginBottom="20dp">
+
+                <!-- Nome e Ícone do Exercício Ativo -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/haltere"
+                        android:layout_marginEnd="12dp" />
+
+                    <TextView
+                        android:id="@+id/txtNomeExercicioAtivo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Cadeira Extensora"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Séries Detalhadas em Caixas Brancas -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:background="#FFFFFF"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp"
+                        android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="1º Série" android:textColor="#0D1B68" android:textStyle="bold" android:textSize="15sp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12x" android:textColor="#0D1B68" android:textStyle="bold" android:textSize="15sp" android:layout_marginEnd="32dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Des 30s" android:textColor="#666666" android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:background="#FFFFFF"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp"
+                        android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="2º Série" android:textColor="#0D1B68" android:textStyle="bold" android:textSize="15sp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12x" android:textColor="#0D1B68" android:textStyle="bold" android:textSize="15sp" android:layout_marginEnd="32dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Des 30s" android:textColor="#666666" android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:background="#FFFFFF"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="3º Série" android:textColor="#0D1B68" android:textStyle="bold" android:textSize="15sp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12x" android:textColor="#0D1B68" android:textStyle="bold" android:textSize="15sp" android:layout_marginEnd="32dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Des 30s" android:textColor="#666666" android:textSize="14sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Botão Problemas? -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnProblemas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Problemas?"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:backgroundTint="#334499"
+                    style="?attr/materialButtonOutlinedStyle" />
+            </LinearLayout>
+
+            <!-- CARTÃO COM A LISTA DE TODOS OS EXERCÍCIOS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card_arredondado"
+                android:backgroundTint="#1B2D82"
+                android:padding="16dp"
+                android:layout_marginBottom="24dp">
+
+                <!-- Cabeçalho da Tabela dos Outros Exercícios -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2.2" android:text="Exercício" android:textColor="#A0A0A0" android:textSize="12sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="Séries" android:textColor="#A0A0A0" android:textSize="12sp" android:textStyle="bold" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8" android:text="Rep." android:textColor="#A0A0A0" android:textSize="12sp" android:textStyle="bold" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="Descanso" android:textColor="#A0A0A0" android:textSize="12sp" android:textStyle="bold" android:gravity="end"/>
+                </LinearLayout>
+
+                <!-- Container dinâmico com os restantes exercícios -->
+                <LinearLayout
+                    android:id="@+id/layoutListaOutrosExercicios"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Botão Finalizar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center"
+        android:background="#0D1B68">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFinalizarTreino"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="Finalizar"
+            android:textColor="#0D1B68"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#E8F1F5" />
+    </LinearLayout>
+
+</LinearLayout>
